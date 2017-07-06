@@ -1,0 +1,319 @@
+.header
+	background: red
+
+.header-top-wrap
+	padding: 20px 0
+	background: rgba(0, 0, 0, 0.30)
+
+.header-top
+	f()
+	align-items: center
+//.header-top__nav
+.header-top__loc
+	f()
+	cp()
+	align-items: center
+	width: 200px
+
+.header-top__loc-icon
+	.icon
+		size 20px
+		fill yellow
+		margin-right: 10px
+		margin-top: 3px
+
+.header-top__loc-town
+	tr(all)
+	color white
+	opacity:.5
+	&:hover
+		opacity 1
+
+.header-top__nav-wrap
+	width: 30%
+	flex(between)
+
+.header-top__nav-el
+	tr(all)
+	color white
+	opacity:.5
+	&:hover
+		opacity 1
+
+.header-top__auth
+	flex(between)
+	width: 15%
+	margin-left: auto
+	min-width 160px
+
+.header-top__auth-el
+	tr(all)
+	cp()
+	color white
+	opacity:.5
+	&:hover
+		opacity 1
+//.header-top__auth-enter
+
+.header-top__auth-divider
+	height: 22px
+	width: 1px
+	background: rgba(255, 255, 255, 0.3)
+
+//.header-top__auth-regist
+.header-main-wrap
+	position: relative
+
+.header--main-page
+	height: 620px
+	bgi('main-baner.jpg');
+	bg-full()
+
+.header-main
+	f()
+	align-items: center
+	padding: 10px 0
+
+.header-main__logo
+	width: 100px
+	display: block
+	margin-right: 7%
+	img
+		width: 100%
+
+.header-info
+	f()
+
+.header-info__icon
+	margin-right: 20px
+	.icon
+		size 32px
+		fill white
+
+.header-info__cont
+	a
+		display: block
+
+.header-info__phone
+	cp()
+	font-size: 20px
+	font-weight: 500
+	color white
+
+.header-info__callback
+	cp()
+	tr(all)
+	color white
+	opacity .5
+	text-decoration: underline
+	&:hover
+		opacity 1
+		text-decoration: none
+
+.header-info__text
+	color white
+
+.header-menu
+	br(30px)
+	cp()
+	tr(all)
+	padding: 16px 25px
+	background: white
+	margin-right: 60px
+	&:hover
+		box-shadow: 0 7px 9px rgba(0, 0, 0, 0.05)
+
+.header-menu__cont
+	flex(mid)
+	.icon
+		size 22px
+		margin-right: 15px
+	span
+		font-size: 18px
+		font-weight: 500
+
+.header-cart
+	round()
+	flex(mid)
+	cp()
+	tr(all)
+	background: yellow
+	position: relative
+	size 54px
+	&:hover
+		background: light-yellow
+	.icon
+		width: 32px
+		height: 24px
+
+.header-cart__val
+	round()
+	flex(mid)
+	position: absolute
+	color white
+	size: 24px
+	top 0px
+	right: 0px
+	background: red
+
+.header-nav
+	flex(between)
+	margin-left: auto
+
+.header-info__wrap
+	flex(between)
+	width: 40%
+
+.header-menu-sub-wrap
+	display: none
+	background: white
+	position: absolute
+	width: 100%
+	top 100%
+	left: 0
+	box-shadow: 0 3px 29px rgba(0, 0, 0, 0.15)
+
+.header-menu-sub
+	flex(around)
+	padding: 35px 0
+	position: relative
+
+.header-menu-sub__el
+	font-weight: 500
+	font-size: 20px
+	color #7b7b7b
+	tr(all)
+	&:hover
+		color: black
+
+.header-menu-sub__el--active
+	color black
+
+.header-menu-sub-coner
+	position: absolute
+	top -8px
+	size 16px
+	background white
+	right: 170px
+	transform rotate(45deg)
+
+.icon-menu-close
+	display: none
+
+.header-menu--open
+	.icon-menu-close
+		display: block
+	.icon-menu
+		display: none
+
+.shrinkUp
+	position fixed!important
+	top 0
+	left 0
+	background white!important
+	width 100%
+	margin 0
+	z-index 9999
+	transform translateY(-100%)!important
+	transition all 1s
+
+.shrink
+	position fixed!important
+	top 0
+	left 0
+	background white!important
+	width 100%
+	margin 0
+	z-index 9999
+	.header-info__icon
+		.icon
+			fill black
+	.header-info__phone
+		color black
+	.header-info__callback
+		color black
+	.header-info__text
+		color black
+	.header-menu
+		border 1px solid #e5e5e5
+
+.basket-wrap
+	position: absolute
+	width: 100%
+	left: 0
+	top 100%
+	background: white
+	z-index 100
+	box-shadow: 0 3px 29px rgba(0, 0, 0, 0.15);
+
+.basket
+	padding: 60px 0
+
+.basket-wrap-coner
+	position: absolute
+	top -8px
+	size 16px
+	background white
+	right: 28px
+	transform rotate(45deg)
+
+.basket__el
+	flex(between)
+	padding: 15px 20px
+	border 1px solid #f6f6f6
+	margin-top: -1px
+
+.basket__img
+	width: 80px
+	height: 60px
+	bg-full()
+	background-size: contain
+
+.basket__ingr
+	f()
+
+.basket__ingr-el
+	bg-full()
+	margin-right: 20px
+	size 40px
+	background-size: contain
+
+//.basket__name
+.basket__name-text
+	@extend .type--md
+	font-family "PF Beau Sans Pro"
+	font-weight 900
+.basket__name-link
+	cp()
+	margin-top: 5px
+	@extend .link--text
+
+
+//.basket__inc
+.basket__price
+	@extend .type--md
+	font-family "PF Beau Sans Pro"
+	font-weight 900
+
+.basket__delete
+	.icon
+		cp()
+		tr(all)
+		size 25px
+		fill black
+		opacity 0.3
+		&:hover
+			opacity: 1
+//.basket-footer
+//.basket-total-text
+
+//.basket-total
+//.basket-total-false
+//.basket-total-true
+//.basket-promo
+//.promo
+//.promo-input
+//.promo-get
+//.basket-get
+//.btn--md
+//.btn--yellow

@@ -1,0 +1,292 @@
+// ============================ Curent color ============================
+navy = #001F3F
+blue = #00b4ff
+aqua = #7FDBFF
+teal = #39CCCC
+olive = #3D9970
+green = #2ECC40
+lime = #01FF70
+yellow = #FFDC00
+orange = #FF851B
+red = #FF4136
+fuchsia = #F012BE
+purple = #B10DC9
+maroon = #85144B
+white = #FFFFFF
+silver = #DDDDDD
+gray = #AAAAAA
+black = #111111
+
+dark-yellow = #ffae00
+yellow = #fcca03
+light-yellow = #ffe21e
+dark-red = #ad0c14
+red = #cd0b15
+light-red = #ef2b35
+
+
+$main-text-color = black
+$link-color = black
+$link-color-visited = grey
+$link-color-hover = black
+$border-color = #cdcdcd
+
+//  ============================ Typography ============================
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//webfont('PT Sans', 'PT Sans', 'normal')
+$v-font =  'Roboto', sans-serif
+
+webfont('PF Beau Sans Pro', 'PFBeauSansPro-Black', '900')
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+.type--xs
+	typeSize(12,10)
+
+.type--sm
+	typeSize(14,12)
+
+.type--main
+	typeSize(15,13)
+
+.type--md
+	typeSize(20,16)
+
+.type--lg
+	typeSize(24,18)
+
+.type--xl
+	typeSize(50,24)
+
+.type--bold
+	font-weight bold
+
+h1
+	@extend .type--xl
+	font-family: PF Beau Sans Pro
+h2
+	@extend .type--lg
+	font-family: PF Beau Sans Pro
+h3
+	@extend .type--main
+h4
+	@extend .type--sm
+h5
+	@extend .type--xs
+
+a
+	color black
+
+
+.link--blue
+	tr(all)
+	color blue
+	text-decoration: underline
+	&:hover
+		color #0178f2
+		text-decoration: none
+
+.link--text
+	tr(all)
+	text-decoration: underline
+	color black
+	opacity .7
+	&:hover
+		opacity 1
+		text-decoration: none
+
+
+.link--main
+	color black
+	hover-underline(blue)
+	&:hover
+		color black
+
+
+// ============================ Buttons ============================
+
+btnStyle(bg-btn,color-btn)
+	background bg-btn
+	color color-btn
+	border 1px solid color-btn
+	&:hover
+		background darken(bg-btn,20)
+		color color-btn
+
+btnStyleLight(br-btn,color-btn)
+	color color-btn
+	border br-btn solid color-btn
+	&:hover
+		color darken(color-btn,20)
+		border br-btn solid darken(color-btn,20)
+
+.btn
+	up()
+	tr(all)
+	br(15px)
+	display inline-block
+	background none
+	border 0px
+	color black
+	font-family "PF Beau Sans Pro"
+	font-weight: 900
+	&:hover
+		cursor pointer
+
+.btn--sm
+	@extend .btn
+	font-size 10px
+	padding 5px 10px
+	.nav-icon
+		size 10px
+
+.btn--md
+	@extend .btn
+	br(20px)
+	@extend .type--main
+	padding 10px 50px
+
+.btn--lg
+	@extend .btn
+	@extend .type--md
+	br(30px)
+	padding 20px 95px
+
+.btn--mobile
+	@extend .btn
+	+below(768px)
+		width 100%
+		text-align center
+
+.btn--yellow
+	@extend .btn
+	background-color yellow
+	.nav-icon
+		fill white
+	&:hover
+		color #000000
+		background: light-yellow
+	&:active
+		color #000000
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+.btn--disable
+	@extend .disabled
+	border 1px solid $border-color
+	background-color #ffffff
+	color #000000
+
+.btn--light
+	@extend .btn
+	color black
+	border 1px solid $border-color
+	background-color #ffffff
+	&:hover
+		background-color #f0f0f0
+	&:active
+		background-color yellow
+		border 1px solid yellow
+	.nav-icon
+		fill black
+
+.btn--icon
+	flex(mid)
+
+.nav-icon
+	display inline-block
+	size 20px
+	margin 0 10px
+
+button
+	font-family $v-fon
+// ============================ Inputs ============================
+
+input,textarea,select
+	border 0px
+	padding 20px
+	border 1px solid $border-color
+	resize: none
+	outline: 0 !important
+	border-radius 4px
+	font-family $v-font
+	display block!important
+	margin-bottom 10px
+	placeholder(#888888)
+	background: #f7f7f8
+	tr(all)
+	&:focus
+		border 1px solid blue
+
+.style-label
+	display flex
+	position relative
+	align-items center
+
+
+.style-label--disable
+	@extend .disabled
+
+.check-el
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 30px
+		height 30px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		br(8px)
+		cp()
+		tr(all)
+		&:hover
+			border 1px solid #8d8d8d
+	.icon-check
+		display none
+	.sytle-input
+		&:checked + .sytle-input-element
+			flex(mid)
+			color white
+			.icon-check
+				display block
+				fill #000000
+				size 16px
+
+.style-label--radio
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 22px
+		height 22px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		round()
+		cp()
+	.icon-check
+		display none
+	.sytle-input
+		&:checked + .sytle-input-element
+			flex(mid)
+			color white
+			.icon-radio
+				round()
+				size 14px
+				background blue;
+
