@@ -40,10 +40,11 @@ mixin header()
 						.header-menu
 							.header-menu__cont
 								+icon("menu","icon icon-menu")
-								+icon("garbage","icon icon-menu-close")
+								+icon("close","icon icon-menu-close")
 								span Меню
 						.header-cart
-							+icon("cart","icon")
+							+icon("cart","icon icon-cart")
+							+icon("close","icon icon-menu-close")
 							.header-cart__val 12
 			.header-menu-sub-wrap
 				.main-cont
@@ -59,18 +60,33 @@ mixin header()
 						.basket-wrap-coner
 						- for (var i=0;i<2;i++)
 							.basket__el
-								.basket__img(style="background-image:url('img/item-pizza-1.png')")
-								.basket__name
-									.basket__name-text Малибу
-									.basket__name-link Добавить ингредиенты
-								.basket__ingr
-									- for (var j=0;j<4;j++)
-										.basket__ingr-el(style="background-image:url('img/sauce.png')")
-								.basket__inc
-									+incr()
-								.basket__price 120 р.
-								.basket__delete
-									+icon("garbage","icon")
+								.basket__el-info
+									.basket__img(style="background-image:url('img/item-pizza-1.png')")
+									.basket__name
+										.basket__name-text Малибу
+										.basket__name-link Добавить ингредиенты
+									.basket__ingr
+										- for (var j=0;j<4;j++)
+											.basket__ingr-el(style="background-image:url('img/sauce.png')")
+								.basket__el-change
+									.basket__inc
+										+incr()
+									.basket__price 120 р.
+									.basket__delete
+										+icon("garbage","icon")
+						- for (var i=0;i<2;i++)
+							.basket__el
+								.basket__el-info
+									.basket__img(style="background-image:url('img/item-pizza-1.png')")
+									.basket__name
+										.basket__name-text Малибу
+								.basket__el-change
+									.basket__inc
+										+incr()
+									.basket__price 120 р.
+									.basket__delete
+										+icon("garbage","icon")
+
 						.basket-footer
 							.basket-total-text Итого:
 							.basket-total
@@ -80,7 +96,7 @@ mixin header()
 								.promo
 									input(type="text" placeholder="Промокод").promo-input
 									.promo-get
-										+icon("arrow-right","icon")
+										+icon("arrow-custom","icon")
 							.basket-get
 								a(href="#").btn--md.btn--yellow Оформить
 	//block header end

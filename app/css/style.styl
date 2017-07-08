@@ -55,7 +55,7 @@ body
 		background-color yellow
 		border 0
 		.icon
-			fill white
+			fill black
 	&:active
 		background-color #ea0000
 .incr__val
@@ -67,5 +67,35 @@ body
 	tr(all)
 
 //increment-end
+
+
+@keyframes bounceIn {
+	from {
+			transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+			transform: scale3d(1.05, 1.05, 1.05);
+	}
+	to {
+			transform: scale3d(1, 1, 1);
+	}
+	//
+	//from {
+  //  opacity: 0;
+  //  transform: translate3d(0, -100%, 0);
+  //}
+	//
+  //to {
+  //  opacity: 1;
+  //  transform: none;
+  //}
+}
+
+
+.bounceIn
+	animation-name: bounceIn
+
+
 
 @import "../module/**/*"
