@@ -1,3 +1,47 @@
 mixin footer()
 	//block footer
-	//block footer end
+	.footer-wrap
+			.footer
+				.main-cont
+					.footer-top
+						.footer-top__el Наша
+							a(href="#").link--blue зона доставки
+							| <br> ограничена
+						.footer-top__el Минимальная сумма заказа составляет 299 р.
+						.footer-top__el Акции с комбо и другими спец-предложениями не суммируются.
+						.footer-top__el Цены в меню указаны без учета скидок.
+
+				.footer-bottom-wrap
+					.main-cont
+						.footer-bottom
+							.footer-bottom__copy
+								.footer-bottom__copy-text © Пицца Супер РОН. 2014. Все права защищены
+								a(href="#").footer-bottom__copy-link Публичная оферта
+							.footer-menu
+								.footer-menu__col
+									-
+										var items = [
+											'Пицца',
+											'Сделай сам',
+											'Закуски',
+											'Салаты',
+											'Десерты',
+											'Напитки',
+											'Комбо',
+											'Акции',
+											'Доставка',
+											'О нас',
+											'Акции',
+											'Контакты'
+											];
+									each item in items
+										a(href="#").footer-menu__el #{item}
+							.footer-info
+								.footer-pay
+									.footer-pay__icon
+										+icon("credit-card","icon")
+									.footer-pay__text Оплата картой онлайн
+								.footer-call
+									a(href="tel:8 800 333 86 63").footer-phone 8 800 333 86 63
+									.footer-callback Обратный звонок
+//block footer end

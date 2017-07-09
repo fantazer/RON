@@ -1,6 +1,7 @@
 mixin header()
 	//block header
 	.header(class=attributes.page)
+		//header-top
 		.header-top-wrap
 			.main-cont
 				.header-top
@@ -16,8 +17,11 @@ mixin header()
 						a(href="#").header-top__nav-el Контакты
 					.header-top__auth
 						.header-top__auth-el.header-top__auth-enter Вход
-						.header-top__auth-divider 
+						.header-top__auth-divider
 						.header-top__auth-el.header-top__auth-regist Регистрация
+		//header-top-end
+
+		//header-main
 		.header-main-wrap
 			.main-cont
 				.header-main
@@ -46,6 +50,8 @@ mixin header()
 							+icon("cart","icon icon-cart")
 							+icon("close","icon icon-menu-close")
 							.header-cart__val 12
+
+			//heade-sub-menu
 			.header-menu-sub-wrap
 				.main-cont
 					.header-menu-sub
@@ -54,6 +60,8 @@ mixin header()
 						-var items = ['Две половинки','Комбо','Закуски','Салаты','Десерты','Напитки'];
 						each item in items
 							a(href="#").header-menu-sub__el #{item}
+
+			//header-basket
 			.basket-wrap
 				.main-cont
 					.basket
@@ -86,7 +94,7 @@ mixin header()
 									.basket__price 120 р.
 									.basket__delete
 										+icon("garbage","icon")
-
+						//basket-footer
 						.basket-footer
 							.basket-total-text Итого:
 							.basket-total
