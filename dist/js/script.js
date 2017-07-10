@@ -1,19 +1,71 @@
 $(document).ready(function(){
 
-	/* ###### For SlideToggle Elements  ######*/
+	//sale slider
+	$(".block-sale__slider").owlCarousel({
+ items : 1,
+ autoHeight : true,
+ dots: true,
+ autoplay : true,
+ singleItem:true,
+ nav:false,
+ loop:true
+ }
+);
+	//sale slider-end
+
+	//increment field
+	$('.incr__minus').click(function () {
+        var $input = $(this).parent().find('.incr__val span');
+        var count = parseInt($input.html()) - 1;
+        count = count < 1 ? 0 : count;
+        $input.html(count);
+    });
+
+	$('.incr__plus').click(function () {
+	    var $input = $(this).parent().find('.incr__val span');
+	    var count = parseInt($input.html()) + 1;
+	    count = count > 10 ? 10 : count;
+	    $input.html(count);
+	});
+
+	//increment field end
+
+	//toggle menu
 	$('.header-menu').click(function(event){
-			event.stopPropagation();
-			$('.header-menu-sub-wrap').slideToggle("fast");
+			$('.basket-wrap').removeClass('bounce-show');
+			$('.header-cart').removeClass('header-cart--open');
+
+			$('.header-menu-sub-wrap').toggleClass('bounce-show');
 			$('.header-menu').toggleClass('header-menu--open');
+			event.stopPropagation();
 	});
 	$('.header-menu-sub-wrap').on("click", function (event) {
 		event.stopPropagation();
 	});
 	$(document).on("click", function () {
-			$('.header-menu-sub-wrap').hide();
+			$('.header-menu').removeClass('header-menu--open');
+			$('.header-menu-sub-wrap').removeClass('bounce-show');
 	});
+	//toggle menu end
 
-	//animate header
+	//toggle basket
+	$('.header-cart').click(function(event){
+			$('.header-menu-sub-wrap').removeClass('bounce-show');
+			$('.header-menu').removeClass('header-menu--open');
+
+			$('.basket-wrap').toggleClass('bounce-show');
+			$('.header-cart').toggleClass('header-cart--open');
+			event.stopPropagation();
+	});
+	$('.basket-wrap').on("click", function (event) {
+		event.stopPropagation();
+	});
+	$(document).on("click", function () {
+			$('.header-cart').removeClass('header-cart--open');
+			$('.basket-wrap').removeClass('bounce-show');
+	});
+	//toggle basket end
+
 	//animate header
 	var shrinkHeader = 300;
 	var needScroll  = false;
@@ -38,9 +90,10 @@ $(document).ready(function(){
         	$('.header-main-wrap').removeClass('shrinkUp');
         }
 	});
+	//animate header end
+
 
 	//Stick panel
-
 	// ===== for template header =====
 	//See mixin header
 	/*

@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+	//sale slider
+	$(".block-sale__slider").owlCarousel({
+ items : 1,
+ autoHeight : true,
+ dots: true,
+ autoplay : true,
+ singleItem:true,
+ nav:false,
+ loop:true
+ }
+);
+	//sale slider-end
+
 	//increment field
 	$('.incr__minus').click(function () {
         var $input = $(this).parent().find('.incr__val span');

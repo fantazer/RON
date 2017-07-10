@@ -92,10 +92,169 @@ body
   //}
 }
 
-
 .bounceIn
 	animation-name: bounceIn
 
+.content
+	margin-top: 80px
 
+.cont-item-small
+	flex(between)
+	margin-bottom: 20px
+
+.item
+	width: 32%
+	padding: 25px
+	padding-bottom: 60px
+	border-radius 10px
+	border 2px solid #f8f8f8
+	background-color #ffffff
+	tr(all)
+	&:hover
+		border 2px solid #e6e6e6
+		.item__img-el
+			tr(all)
+			width: 90%
+
+.item__img
+	height: 150px
+	margin-bottom: 40px
+	flex(mid)
+	img
+		margin: 0 auto
+		tr(all)
+		width: 100%
+
+.item__img-el
+	width: 100%
+	height: 100%
+	bg-full()
+
+.item__title
+	@extend .type--lg
+	font-weight: 900
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 20px
+	font-family "PF Beau Sans Pro"
+
+.item__text
+	text-align: center
+	width: 70%
+	margin: 0 auto
+
+.box
+	border-radius 10px
+	border 2px solid #f8f8f8
+	background-color #ffffff
+
+.offer
+	f()
+	@extend .box
+	padding: 20px
+	margin-bottom: 20px
+	justify-content: space-between
+
+.offer-img
+	flex(mid)
+	width: 45%
+
+.offer-info
+	flex(mid)
+	flex-flow: column
+	width: 55%
+
+.offer-title
+	@extend .type--lg
+	up()
+	font-weight: 900
+	margin-bottom: 20px
+	font-family "PF Beau Sans Pro"
+
+.offer-text
+	width: 70%
+	opacity 0.8
+	text-align: center
+
+.main-kind
+	flex(between)
+	margin-bottom: 50px
+	.kind-el
+		width: 24%
+
+.kind-el
+	@extend .box
+	tr(all)
+	padding: 40px 20px
+	&:hover
+		border 2px solid #e6e6e6
+		.kind-img-el
+			tr(all)
+			width: 90%
+
+.kind-img
+	flex(mid)
+	width: 100%
+	height: 130px
+	margin-bottom: 30px
+
+
+.kind-img-el
+	width: 100%
+	height: 100%
+	bg-full()
+	background-size: contain
+
+
+.kind-title
+	@extend .type--lg
+	up()
+	text-align: center
+	font-weight: 900
+	font-family "PF Beau Sans Pro"
+
+.block-sale-wrap
+	background-color #f9f9f9
+
+.block-sale
+	flex(between)
+	padding: 35px 0
+	.owl-dots
+		width 100%
+		flex(mid)
+		margin-top 20px
+		position relative
+		z-index 2000
+	.owl-dot
+		round()
+		margin 5px
+		size 8px
+		background-color #000000
+		opacity 0.2
+	.owl-dot.active
+		background #322f40
+		opacity 1
+
+.block-sale__slider
+	width: 35%
+
+.block-sale__el
+	padding: 10px
+	box-shadow 0 15px 32px rgba(0, 0, 0, 0.02)
+	border-radius 10px
+	background: white
+
+.block-sale__info
+	width: 50%
+
+.block-sale__title
+	@extend .type--xl
+	up()
+	font-family "PF Beau Sans Pro"
+	margin-bottom: 30px
+
+.block-sale__text
+	line-height: 1.8
+	width: 90%
 
 @import "../module/**/*"
