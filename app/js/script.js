@@ -1,16 +1,37 @@
 $(document).ready(function(){
 
+	//toggle filter ingr
+	$('.filter-ingr__el').click(function () {
+		$(this).toggleClass('filter-ingr__el--active')
+	})
+	//toggle filter ingr end
+
+	//reset filter
+	$('.filter-footer__reset').click(function () {
+		$('.filter-ingr__el').removeClass('filter-ingr__el--active')
+		$( ".check-el .sytle-input" ).prop( "checked", false );
+	});
+	//reset filter-end
+
+	//show filter
+	$('.filter-title__setting').click(function () {
+		$(this).toggleClass('filter-title__setting--active')
+		$('.filter').slideToggle();
+	});
+
+	//show filter-end
+
 	//sale slider
 	$(".block-sale__slider").owlCarousel({
- items : 1,
- autoHeight : true,
- dots: true,
- autoplay : true,
- singleItem:true,
- nav:false,
- loop:true
- }
-);
+		 items : 1,
+		 autoHeight : true,
+		 dots: true,
+		 autoplay : true,
+		 singleItem:true,
+		 nav:false,
+		 loop:true
+		 }
+	);
 	//sale slider-end
 
 	//increment field

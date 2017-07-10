@@ -95,10 +95,9 @@ body
 .bounceIn
 	animation-name: bounceIn
 
-.content
-	margin-top: 80px
 
 .cont-item-small
+	margin-top: 80px
 	flex(between)
 	margin-bottom: 20px
 
@@ -256,5 +255,107 @@ body
 .block-sale__text
 	line-height: 1.8
 	width: 90%
+
+.menu-type
+	flex(around)
+	padding: 30px 0
+	border-bottom:1px solid #f0f0f0
+
+.menu-type__el
+	@extend .type--md
+	color #7b7b7b
+	font-weight: 500
+	tr(all)
+	&:hover
+		color black
+
+.menu-type__el-active
+	color black
+
+.filter-title
+	flex(between)
+	padding: 35px 0
+	border-bottom:1px solid #f0f0f0
+
+.filter-title__arrow
+	.icon
+		size 50px
+		fill black
+		tr(all)
+		opacity .2
+		&:hover
+			opacity 1
+
+.filter-title__name
+	@extend .type--xl
+	font-family "PF Beau Sans Pro"
+
+.filter-title__setting
+	.icon
+		tr(all)
+		cp()
+		size 50px
+		fill black
+		opacity .2
+		&:hover
+			opacity 1
+
+.filter
+	display: none
+
+.filter-check
+	flex(between)
+	fw()
+	border-bottom:1px solid #e2e2e2
+
+.filter-name
+	@extend .type--lg
+	font-family "PF Beau Sans Pro"
+	margin-bottom: 20px
+	padding: 20px 0
+
+.filter-check__el
+	margin-bottom: 20px
+	width: 24%
+
+.filter-ingr
+	f()
+	fw()
+
+.filter-ingr__el
+	cp()
+	tr(background)
+	margin-right: 10px
+	padding: 10px 30px
+	border-radius 25px
+	border 1px solid #cdcdcd
+	background-color rgba(255, 255, 255, 0)
+	margin-bottom: 15px
+	&:hover
+		background: yellow
+		padding: 11px 31px
+		border 0
+
+.filter-ingr__el--active
+	background: yellow
+	padding: 11px 31px
+	border 0
+
+.filter-footer
+	f()
+	align-items: center
+	justify-content: flex-end
+	padding-top: 60px
+
+.filter-footer__reset
+	margin-right: 20px
+
+.filter-footer__reset
+	cp()
+
+.filter-title__setting--active
+	.icon
+		fill black
+		opacity 1
 
 @import "../module/**/*"

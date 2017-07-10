@@ -4,6 +4,8 @@
 		"footer":"footer"
 	},
 	"page":{
-		"index":"index"
+		"index":"index",
+		"catalog":"catalog"
+
 	}
 }
