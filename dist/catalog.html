@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--icons-->
+		<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
+		<link type="image/x-icon" rel="icon" href="img/favicon.ico" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<!--block footer end-->
+		<!--block header-->
+		<div class="header">
+			<!--header-top-->
+			<div class="header-top-wrap">
+				<div class="main-cont">
+					<div class="header-top">
+						<div class="header-top__nav">
+							<div class="header-top__loc">
+								<div class="header-top__loc-icon">
+									<svg class="icon">
+										<use xlink:href="#map"></use>
+									</svg>
+								</div>
+								<div class="header-top__loc-town">Тольятти</div>
+							</div>
+						</div>
+						<div class="header-top__nav-wrap">
+							<a class="header-top__nav-el" href="#">Доставка</a>
+							<a class="header-top__nav-el" href="#">Отзывы</a>
+							<a class="header-top__nav-el" href="#">О нас</a>
+							<a class="header-top__nav-el" href="#">Контакты</a>
+						</div>
+						<div class="header-top__auth">
+							<div class="header-top__auth-el header-top__auth-enter">Вход</div>
+							<div class="header-top__auth-divider"></div>
+							<div class="header-top__auth-el header-top__auth-regist">Регистрация</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--header-top-end-->
+			<!--header-main-->
+			<div class="header-main-wrap">
+				<div class="main-cont">
+					<div class="header-main">
+						<a class="header-main__logo" href="#">
+							<img src="img/logo.svg" alt="" />
+						</a>
+						<div class="header-info__wrap">
+							<div class="header-info">
+								<div class="header-info__icon">
+									<svg class="icon">
+										<use xlink:href="#phone"></use>
+									</svg>
+								</div>
+								<div class="header-info__cont">
+									<a class="header-info__phone" href="tel:8 800 333 86 63">8 800 333 86 63</a>
+									<div class="header-info__callback">Обратный звонок</div>
+								</div>
+							</div>
+							<div class="header-info">
+								<div class="header-info__icon">
+									<svg class="icon">
+										<use xlink:href="#time"></use>
+									</svg>
+								</div>
+								<div class="header-info__cont">
+									<div class="header-info__text">Работаем</div>
+									<div class="header-info__text">с 11:00 до 23:00!</div>
+								</div>
+							</div>
+						</div>
+						<div class="header-nav">
+							<div class="header-menu">
+								<div class="header-menu__cont">
+									<svg class="icon icon-menu">
+										<use xlink:href="#menu"></use>
+									</svg>
+									<svg class="icon icon-menu-close">
+										<use xlink:href="#close"></use>
+									</svg>
+									<span>Меню</span>
+								</div>
+							</div>
+							<div class="header-cart">
+								<svg class="icon icon-cart">
+									<use xlink:href="#cart"></use>
+								</svg>
+								<svg class="icon icon-menu-close">
+									<use xlink:href="#close"></use>
+								</svg>
+								<div class="header-cart__val">12</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--heade-sub-menu-->
+				<div class="header-menu-sub-wrap">
+					<div class="main-cont">
+						<div class="header-menu-sub">
+							<div class="header-menu-sub-coner"></div>
+							<a class="header-menu-sub__el header-menu-sub__el--active" href="#">Пицца</a>
+							<a class="header-menu-sub__el" href="#">Две половинки</a>
+							<a class="header-menu-sub__el" href="#">Комбо</a>
+							<a class="header-menu-sub__el" href="#">Закуски</a>
+							<a class="header-menu-sub__el" href="#">Салаты</a>
+							<a class="header-menu-sub__el" href="#">Десерты</a>
+							<a class="header-menu-sub__el" href="#">Напитки</a>
+						</div>
+					</div>
+				</div>
+				<!--header-basket-->
+				<div class="basket-wrap">
+					<div class="main-cont">
+						<div class="basket">
+							<div class="basket-wrap-coner"></div>
+							<div class="basket__el">
+								<div class="basket__el-info">
+									<div class="basket__img" style="background-image:url('img/item-pizza-1.png');"></div>
+									<div class="basket__name">
+										<div class="basket__name-text">Малибу</div>
+										<div class="basket__name-link">Добавить ингредиенты</div>
+									</div>
+									<div class="basket__ingr">
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+									</div>
+								</div>
+								<div class="basket__el-change">
+									<div class="basket__inc">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="basket__price">120 р.</div>
+									<div class="basket__delete">
+										<svg class="icon">
+											<use xlink:href="#garbage"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="basket__el">
+								<div class="basket__el-info">
+									<div class="basket__img" style="background-image:url('img/item-pizza-1.png');"></div>
+									<div class="basket__name">
+										<div class="basket__name-text">Малибу</div>
+										<div class="basket__name-link">Добавить ингредиенты</div>
+									</div>
+									<div class="basket__ingr">
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+										<div class="basket__ingr-el" style="background-image:url('img/sauce.png');"></div>
+									</div>
+								</div>
+								<div class="basket__el-change">
+									<div class="basket__inc">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="basket__price">120 р.</div>
+									<div class="basket__delete">
+										<svg class="icon">
+											<use xlink:href="#garbage"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="basket__el">
+								<div class="basket__el-info">
+									<div class="basket__img" style="background-image:url('img/item-pizza-1.png');"></div>
+									<div class="basket__name">
+										<div class="basket__name-text">Малибу</div>
+									</div>
+								</div>
+								<div class="basket__el-change">
+									<div class="basket__inc">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="basket__price">120 р.</div>
+									<div class="basket__delete">
+										<svg class="icon">
+											<use xlink:href="#garbage"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="basket__el">
+								<div class="basket__el-info">
+									<div class="basket__img" style="background-image:url('img/item-pizza-1.png');"></div>
+									<div class="basket__name">
+										<div class="basket__name-text">Малибу</div>
+									</div>
+								</div>
+								<div class="basket__el-change">
+									<div class="basket__inc">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="basket__price">120 р.</div>
+									<div class="basket__delete">
+										<svg class="icon">
+											<use xlink:href="#garbage"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<!--basket-footer-->
+							<div class="basket-footer">
+								<div class="basket-total-text">Итого:</div>
+								<div class="basket-total">
+									<div class="basket-total-false">15 000 р.</div>
+									<div class="basket-total-true">12 000 р.</div>
+								</div>
+								<div class="basket-promo">
+									<div class="promo">
+										<input class="promo-input" type="text" placeholder="Промокод" />
+										<div class="promo-get">
+											<svg class="icon">
+												<use xlink:href="#arrow-custom"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="basket-get">
+									<a class="btn--md btn--yellow" href="#">Оформить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--block header end-->
+		<div class="content">
+			<div class="main-cont">
+				<div class="menu-type">
+					<a class="menu-type__el menu-type__el-active" href="#">Пицца</a>
+					<a class="menu-type__el" href="#">Две половинка</a>
+					<a class="menu-type__el" href="#">Комбо</a>
+					<a class="menu-type__el" href="#">Закуски</a>
+					<a class="menu-type__el" href="#">Салаты</a>
+					<a class="menu-type__el" href="#">Десерты</a>
+					<a class="menu-type__el" href="#">Напитки</a>
+				</div>
+				<div class="filter-title">
+					<a class="filter-title__arrow" href="#">
+						<svg class="icon">
+							<use xlink:href="#round-arrow-left"></use>
+						</svg>
+					</a>
+					<div class="filter-title__name">Пицца</div>
+					<div class="filter-title__setting">
+						<svg class="icon">
+							<use xlink:href="#filter"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="filter">
+					<div class="filter-name">Фильтр пицц</div>
+					<div class="filter-check">
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Популярные</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">На пицца соусе</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">На сливочно-чесночном соусе</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Детям</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Легкие</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Острые</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">С мясом</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без лука</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без мяса</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без грибов</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без орегано</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без балгарского перца</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без грибов</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без орегано</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без балгарского перца</div>
+								</label>
+							</div>
+						</div>
+						<div class="filter-check__el">
+							<div class="check-el">
+								<label class="style-label style-label--checkbox">
+									<input class="sytle-input" type="checkbox" />
+									<div class="sytle-input-element">
+										<svg class="icon-check">
+											<use xlink:href="#checked"></use>
+										</svg>
+									</div>
+									<div class="sytle-input-text">Без грибов</div>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="filter-name">Ингредиенты</div>
+					<div class="filter-ingr">
+						<div class="filter-ingr__el">Бекон</div>
+						<div class="filter-ingr__el">Пепперони</div>
+						<div class="filter-ingr__el">Говядина</div>
+						<div class="filter-ingr__el">Ветчина</div>
+						<div class="filter-ingr__el">Куриная грудка</div>
+						<div class="filter-ingr__el">Креветки</div>
+						<div class="filter-ingr__el">Лук</div>
+						<div class="filter-ingr__el">Болгарский перец</div>
+						<div class="filter-ingr__el">Бекон</div>
+						<div class="filter-ingr__el">Пепперони</div>
+						<div class="filter-ingr__el">Говядина</div>
+						<div class="filter-ingr__el">Ветчина</div>
+						<div class="filter-ingr__el">Куриная грудка</div>
+						<div class="filter-ingr__el">Креветки</div>
+						<div class="filter-ingr__el">Лук</div>
+						<div class="filter-ingr__el">Болгарский перец</div>
+					</div>
+					<div class="filter-footer">
+						<div class="filter-footer__reset link--text">Сбросить</div>
+						<div class="filter-footer__get">
+							<a class="btn--md btn--yellow" href="#">Применить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-cont">
+				<div class="product-cont">
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+					<!--block product-->
+					<div class="product-el">
+						<div class="product-front product-wrap">
+							<div class="product__img">
+								<div class="product__img-el" style="background-image:url('img/item-pizza-1.png');"></div>
+							</div>
+							<div class="product__title">Рокки Роутс</div>
+							<div class="product__text">Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано</div>
+						</div>
+						<div class="product-back">
+							<div class="product-back__title">Рокки Роутс
+								<div class="product-back__arrow">
+									<svg class="icon">
+										<use xlink:href="#arrow-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-type">
+									<div class="product-type__el product-thin product-type--active">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#fat"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Толстое тесто</div>
+									</div>
+									<div class="product-type__el product-fat">
+										<div class="product-type__icon">
+											<svg class="icon">
+												<use xlink:href="#thin"></use>
+											</svg>
+										</div>
+										<div class="product-type__name">Тонкое тесто</div>
+									</div>
+								</div>
+								<div class="product-type-condition">
+									<div class="product-type-condition-row">
+										<div class="product-type-condition-el"></div>
+									</div>
+								</div>
+								<div class="product-size">
+									<div class="product-size__el product-size__el--active">
+										<div class="product-size__val">25</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">31</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">36</div>
+										<div class="product-size__type">см</div>
+									</div>
+									<div class="product-size__el">
+										<div class="product-size__val">40</div>
+										<div class="product-size__type">см</div>
+									</div>
+								</div>
+								<div class="product-width">456 г.</div>
+							</div>
+						</div>
+						<div class="product-footer">
+							<div class="product-price">от 860 р.</div>
+							<div class="product-get">Выбрать</div>
+							<div class="product-add">Добавить</div>
+							<div class="product-incr">
+								<div class="elements-icr-block">
+									<div class="incr">
+										<div class="incr__minus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#minus"></use>
+											</svg>
+										</div>
+										<div class="incr__val">
+											<span>1</span>
+											<div class="incr__val-coner"></div>
+										</div>
+										<div class="incr__plus incr__nav">
+											<svg class="icon">
+												<use xlink:href="#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block product end-->
+				</div>
+			</div>
+		</div>
+		<!--block footer-->
+		<div class="footer-wrap">
+			<div class="footer">
+				<div class="main-cont">
+					<div class="footer-top">
+						<div class="footer-top__el">Наша
+							<a class="link--blue" href="#">зона доставки</a>
+							<br> ограничена</div>
+						<div class="footer-top__el">Минимальная сумма заказа составляет 299 р.</div>
+						<div class="footer-top__el">Акции с комбо и другими спец-предложениями не суммируются.</div>
+						<div class="footer-top__el">Цены в меню указаны без учета скидок.</div>
+					</div>
+				</div>
+				<div class="footer-bottom-wrap">
+					<div class="main-cont">
+						<div class="footer-bottom">
+							<div class="footer-bottom__copy">
+								<div class="footer-bottom__copy-text">© Пицца Супер РОН. 2014. Все права защищены</div>
+								<a class="footer-bottom__copy-link" href="#">Публичная оферта</a>
+							</div>
+							<div class="footer-menu">
+								<div class="footer-menu__col">
+									<a class="footer-menu__el" href="#">Пицца</a>
+									<a class="footer-menu__el" href="#">Сделай сам</a>
+									<a class="footer-menu__el" href="#">Закуски</a>
+									<a class="footer-menu__el" href="#">Салаты</a>
+									<a class="footer-menu__el" href="#">Десерты</a>
+									<a class="footer-menu__el" href="#">Напитки</a>
+									<a class="footer-menu__el" href="#">Комбо</a>
+									<a class="footer-menu__el" href="#">Акции</a>
+									<a class="footer-menu__el" href="#">Доставка</a>
+									<a class="footer-menu__el" href="#">О нас</a>
+									<a class="footer-menu__el" href="#">Акции</a>
+									<a class="footer-menu__el" href="#">Контакты</a>
+								</div>
+							</div>
+							<div class="footer-info">
+								<div class="footer-pay">
+									<div class="footer-pay__icon">
+										<svg class="icon">
+											<use xlink:href="#credit-card"></use>
+										</svg>
+									</div>
+									<div class="footer-pay__text">Оплата картой онлайн</div>
+								</div>
+								<div class="footer-call">
+									<a class="footer-phone" href="tel:8 800 333 86 63">8 800 333 86 63</a>
+									<div class="footer-callback">Обратный звонок</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/combined.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>

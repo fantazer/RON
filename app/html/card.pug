@@ -1,0 +1,96 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		//card
+		.card
+			.card-img
+				.card-img__el(style="background-image:url('img/item-pizza-item.jpg')")
+					.card-img__text Кликните по изображению <br>для увеличения
+			.card-info
+				.card__title
+					a(href="#")
+						+icon("round-arrow-left","icon")
+					span Рокки Роутс
+				.card-tag
+					-
+						var items = [
+							'орегано',
+							'сыр Фета',
+							'сыр моцарелла',
+							'ветчина',
+							'Пицца соус',
+							'сыр Пармезан'
+							];
+					each item in items
+						.card-tag__el.card-tag__el-def #{item}
+					-
+						var items = [
+						'Бекон',
+						'Пепперони',
+						'Говядина'
+						];
+					each item in items
+						.card-tag__el.card-tag__el-add 
+							span #{item}
+							+icon("close","icon")
+
+
+					.card-tag-plus
+						+icon("plus","icon")
+
+				.card-type
+					.card-type__wrap
+						.card-type__el.card-type__el--active
+							.card-type__icon
+								+icon("fat","icon")
+							.card-type__text Толстое тесто
+						.card-type__el
+							.card-type__icon
+								+icon("thin","icon")
+							.card-type__text Тонкое тесто
+					.card-size
+						.card-size__el.card-size__el--active
+							.card-size__val 25
+							.card-size__type см
+						-
+							var items = [
+							'31',
+							'36',
+							'40'
+							];
+						each item in items
+							.card-size__el
+								.card-size__val #{item}
+								.card-size__type см
+
+				.card-total
+					.card-total__info
+						span 456 г.
+						.card-total__divider
+						span 650 руб.
+
+					a(href="#").card-total__get.btn--md.btn--yellow в корзину
+
+
+		//card-end
+
+		//product-cont
+		.product-cont
+			- for (var i=0;i< 5;i++)
+				+product()
+		//product-cont-end
+
+
+.sale-content-wrap
+	.main-cont
+		.sale-content
+			- for (var i=1;i<6;i++)
+				.sale-content__el
+					img(src="img/item-sale-"+i+".jpg", alt="")
+
++footer()
+
+include ./block_html/_script.pug

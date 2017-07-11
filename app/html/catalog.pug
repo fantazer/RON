@@ -1,0 +1,88 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.menu-type
+			a(href="#").menu-type__el.menu-type__el-active Пицца
+			-
+				var items = [
+					'Две половинка',
+					'Комбо',
+					'Закуски',
+					'Салаты',
+					'Десерты',
+					'Напитки'
+					];
+			each item in items
+				a(href="#").menu-type__el #{item}
+		.filter-title
+			a(href="#").filter-title__arrow
+				+icon("round-arrow-left","icon")
+			.filter-title__name Пицца
+			.filter-title__setting
+				+icon("filter","icon")
+
+		.filter
+			.filter-name Фильтр пицц
+			.filter-check
+					-
+						var items = [
+							'Популярные',
+							'На пицца соусе',
+							'На сливочно-чесночном соусе',
+							'Детям',
+							'Легкие',
+							'Острые',
+							'С мясом',
+							'Без лука',
+							'Без мяса',
+							'Без грибов',
+							'Без орегано',
+							'Без балгарского перца',
+							'Без грибов',
+							'Без орегано',
+							'Без балгарского перца',
+							'Без грибов'
+						];
+					each item in items
+						.filter-check__el
+							+checkbox(item)
+			.filter-name Ингредиенты
+			.filter-ingr
+				-
+					var items = [
+						'Бекон',
+						'Пепперони',
+						'Говядина',
+						'Ветчина',
+						'Куриная грудка',
+						'Креветки',
+						'Лук',
+						'Болгарский перец',
+						'Бекон',
+						'Пепперони',
+						'Говядина',
+						'Ветчина',
+						'Куриная грудка',
+						'Креветки',
+						'Лук',
+						'Болгарский перец'
+						];
+				each item in items
+					.filter-ingr__el #{item}
+
+			.filter-footer
+				.filter-footer__reset.link--text Сбросить
+				.filter-footer__get
+					a(href="#").btn--md.btn--yellow Применить
+	.main-cont
+		.product-cont
+			- for (var i=0;i< 6;i++)
+				+product()
+
+
++footer()
+
+include ./block_html/_script.pug

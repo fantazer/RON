@@ -1,16 +1,39 @@
 $(document).ready(function(){
 
+
+
+	//toggle filter ingr
+	$('.filter-ingr__el').click(function () {
+		$(this).toggleClass('filter-ingr__el--active')
+	})
+	//toggle filter ingr end
+
+	//reset filter
+	$('.filter-footer__reset').click(function () {
+		$('.filter-ingr__el').removeClass('filter-ingr__el--active')
+		$( ".check-el .sytle-input" ).prop( "checked", false );
+	});
+	//reset filter-end
+
+	//show filter
+	$('.filter-title__setting').click(function () {
+		$(this).toggleClass('filter-title__setting--active')
+		$('.filter').slideToggle();
+	});
+
+	//show filter-end
+
 	//sale slider
 	$(".block-sale__slider").owlCarousel({
- items : 1,
- autoHeight : true,
- dots: true,
- autoplay : true,
- singleItem:true,
- nav:false,
- loop:true
- }
-);
+		 items : 1,
+		 autoHeight : true,
+		 dots: true,
+		 autoplay : true,
+		 singleItem:true,
+		 nav:false,
+		 loop:true
+		 }
+	);
 	//sale slider-end
 
 	//increment field
@@ -67,20 +90,27 @@ $(document).ready(function(){
 	//toggle basket end
 
 	//animate header
-	var shrinkHeader = 300;
+	var shrinkHeader = 400;
 	var needScroll  = false;
 	$(window).scroll(function() {
+			var heightHeader=$('.header-main-wrap').height();
 	    var scroll = $(this).scrollTop();
 	    if (scroll  > shrinkHeader ) {
 	    	needScroll = true;
 	    }
       if ( scroll >= shrinkHeader ) {
-           var heightHeader=$('.header-main-wrap').height();
-           $('.header-main-wrap').addClass('shrink');
-            $('.header-main-wrap').removeClass('shrinkUp');
+					var heightHeader=$('.header-main-wrap').height();
+					$('.header-main-wrap').addClass('shrink');
+					$('.header-main-wrap').removeClass('shrinkUp');
+					$('body').css({
+						paddingTop:heightHeader
+					});
         }
         else {
             $('.header-main-wrap').removeClass('shrink');
+            $('body').css({
+            	paddingTop:"0px"
+            });
         }
         if ( scroll <= shrinkHeader &&  scroll >= 100 && needScroll) {
         	$('.header-main-wrap').addClass('shrinkUp');
@@ -92,6 +122,70 @@ $(document).ready(function(){
 	});
 	//animate header end
 
+	//product animation
+
+		//toggle main blocks
+		$('.product-get').click(function () {
+			$(this).closest('.product-footer').find('.product-get').hide();
+			$(this).closest('.product-footer').find('.product-add').show();
+			$(this).closest('.product-el').find('.product-front').hide();
+			$(this).closest('.product-el').find('.product-back').show();
+		});
+
+		//toggle buton
+		$('.product-add').click(function () {
+			$(this).closest('.product-footer').find('.product-add').hide();
+			$(this).closest('.product-footer').toggleClass('product-footer-numb');
+		})
+
+		//change size
+		$('.product-size__el').click(function () {
+			$(this).closest('.product-size').find('.product-size__el').removeClass('product-size__el--active');
+			$(this).addClass('product-size__el--active');
+		});
+
+		//Type thin fat
+		$('.product-type__el').click(function () {
+			$(this).closest('.product-info').find('.product-type__el').removeClass('product-type--active');
+			$(this).addClass('product-type--active');
+			if($(this).hasClass('product-fat')){
+				$(this).closest('.product-info').find('.product-type-condition-el').css('left','50%')
+			} else{
+				$(this).closest('.product-info').find('.product-type-condition-el').css('left','0%')
+			}
+		});
+
+	//check val < 0
+	var currentIncr;
+
+	$('.product-incr .incr__nav').click(function () {
+		currentIncr = $(this).closest('.incr').find('.incr__val span').html()*1;
+		if(currentIncr == 0){
+			$(this).closest('.product-footer').find('.product-get').show();
+			$(this).closest('.product-el').find('.product-back').hide();
+			$(this).closest('.product-el').find('.product-front').show();
+			$(this).closest('.product-footer').toggleClass('product-footer-numb');
+			$(this).closest('.incr').find('.incr__val span').html(1)
+		}
+
+	});
+	//check val < 0 end
+
+	//product animation-end
+
+	//card type
+	$('.card-size__el').click(function () {
+			$(this).closest('.card-size').find('.card-size__el').removeClass('card-size__el--active');
+			$(this).addClass('card-size__el--active');
+		});
+	//card type-end
+
+	//card thin or fat
+	$('.card-type__el').click(function () {
+			$('.card-type__el').removeClass('card-type__el--active');
+			$(this).addClass('card-type__el--active');
+		});
+	//card thin or fat-end
 
 	//Stick panel
 	// ===== for template header =====

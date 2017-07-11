@@ -1,11 +1,12 @@
 {
 	"block":{
 		"header":"header",
-		"footer":"footer"
+		"footer":"footer",
+		"product":"product"
 	},
 	"page":{
 		"index":"index",
-		"catalog":"catalog"
-
+		"catalog":"catalog",
+		"card":"card"
 	}
 }

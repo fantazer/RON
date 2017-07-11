@@ -100,9 +100,10 @@ body
 	margin-top: 80px
 	flex(between)
 	margin-bottom: 20px
+	.item
+		width: 32%
 
 .item
-	width: 32%
 	padding: 25px
 	padding-bottom: 60px
 	border-radius 10px
@@ -358,4 +359,199 @@ body
 		fill black
 		opacity 1
 
+.product-wrap
+	.product-el
+		width: 32%
+
+.card
+	f()
+	margin-top: 40px
+	justify-content: space-between
+
+.card-img
+	width: 35%
+
+.card-img__el
+	position: relative
+	width: 100%
+	padding: 54%
+	bg-full()
+	cp()
+	round()
+	overflow hidden
+
+.card-img__text
+	position: absolute
+	bottom: 0px
+	width: 100%
+	background: rgba(0, 0, 0, 0.5)
+	z-index 5
+	left: 0
+	text-align: center
+	padding: 20px 0
+	color white
+	line-height: 1.6
+
+.card-info
+	width: 50%
+
+.card__title
+	up()
+	@extend .type--xl
+	font-family "PF Beau Sans Pro"
+	margin-bottom: 40px
+	position: relative
+	f()
+	align-items: center
+	line-height: 40px
+	.icon
+		size 50px
+		opacity .6
+		position: absolute
+		left: -70px
+		top 0
+.card-tag
+	f()
+	fw()
+	margin-bottom: 40px
+
+.card-tag__el
+	margin-right: 15px
+	margin-bottom: 15px
+	padding: 10px 20px
+	br(20px)
+
+.card-tag__el-def
+	background: #f4f4f4
+
+.card-tag__el-add
+	flex(mid)
+	cp()
+	border 1px solid #a9a9a9
+	.icon
+		margin-left: 10px
+		size 10px
+
+.card-tag-plus
+	flex(mid)
+	round()
+	cp()
+	tr(all)
+	size 40px
+	background: yellow
+	&:hover
+		background: light-yellow
+	.icon
+		size 14px
+
+.card-type
+	border-radius 10px
+	border 1px solid #c9c9c9
+	margin-bottom: 50px
+
+.card-type__wrap
+	flex(between)
+.card-type__el
+	flex(mid)
+	padding: 20px
+	width: 50%
+	opacity 0.6
+	border-bottom:1px solid #c9c9c9
+	cp()
+	.icon
+		size 30px
+		margin-right: 10px
+		opacity 0.6
+.card-type__el--active
+	opacity 1
+	border-bottom:1px solid yellow
+	.icon
+		opacity 1
+
+.card-type__text
+	font-size: 18px
+	font-weight: 500
+
+.card-size
+	flex(mid)
+	padding: 30px 0
+
+.card-size__el
+	round()
+	flex(mid)
+	fl()
+	fw()
+	tr(background)
+	size 60px
+	border: 2px solid #c9c9c9;
+	background-color: rgba(252, 202, 3, 0);
+	margin-right: 20px
+	&:last-child
+		margin-right: 0
+	&:hover
+		opacity: 1
+		background: red
+		border 0
+		cp()
+		.card-size__val
+			color white
+			opacity: 1
+		.card-size__type
+			color white
+			opacity: 1
+
+.card-size__el--active
+	opacity: 1
+	background: red
+	border 0
+	.card-size__val
+		color white
+		opacity: 1
+	.card-size__type
+		color white
+		opacity: 1
+
+.card-size__val
+	@extend .type--md
+	font-family: "PF Beau Sans Pro";
+	color black
+	opacity .6
+
+.card-size__type
+	color black
+	opacity .6
+
+.card-total
+	flex(mid)
+	margin-bottom: 30px
+
+.card-total__info
+	flex(mid)
+	@extend .type--md
+	font-weight 500
+	margin-right: 40px
+
+.card-total__divider
+	width: 1px
+	height: 20px
+	background: #dadada
+	margin: 0 15px
+//.card-total__get
+
+.sale-content-wrap
+	padding: 50px 0 30px 0
+	bgi('sale-bg.jpg')
+	bg-full()
+//.main-cont
+.sale-content
+	flex(mid)
+	fw()
+.sale-content__el
+	padding: 20px
+	width: 30%
+	border-right: 10px
+	background: white
+	margin-right: 20px
+	margin-bottom: 20px
+	br(10px)
 @import "../module/**/*"

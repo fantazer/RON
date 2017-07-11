@@ -1,0 +1,48 @@
+mixin product()
+	//block product
+	.product-el
+		.product-front.product-wrap
+			.product__img
+				.product__img-el(style="background-image:url('img/item-pizza-1.png')")
+			.product__title Рокки Роутс
+			.product__text Пицца соус • сыр моцарелла • сыр Фета • сыр дор блю • сыр пармезан • пепперони • салями • ветчина • томаты • орегано
+		.product-back
+			.product-back__title Рокки Роутс
+				.product-back__arrow
+					+icon("arrow-down","icon")
+			.product-info
+				.product-type
+					.product-type__el.product-thin.product-type--active
+						.product-type__icon
+							+icon("fat","icon")
+						.product-type__name Толстое тесто
+					.product-type__el.product-fat
+						.product-type__icon
+							+icon("thin","icon")
+						.product-type__name Тонкое тесто
+				.product-type-condition
+					.product-type-condition-row
+						.product-type-condition-el
+				.product-size
+					.product-size__el.product-size__el--active
+						.product-size__val 25
+						.product-size__type см
+					-
+						var items = [
+							'31',
+							'36',
+							'40'
+							];
+					each item in items
+						.product-size__el
+							.product-size__val #{item}
+							.product-size__type см
+				.product-width 456 г.
+		.product-footer
+			.product-price от 860 р.
+			.product-get Выбрать
+			.product-add Добавить
+			.product-incr
+				+incr()
+
+	//block product end
