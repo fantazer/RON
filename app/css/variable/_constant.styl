@@ -67,6 +67,14 @@ typeSize(fontSm,font)
 .type--bold
 	font-weight bold
 
+.title--md
+	@extend .type--lg
+	font-family "PF Beau Sans Pro"
+	font-weight 900
+	text-transform uppercase
+	margin-bottom: 20px
+
+
 h1
 	@extend .type--xl
 	font-family: PF Beau Sans Pro
@@ -136,6 +144,7 @@ btnStyleLight(br-btn,color-btn)
 	color black
 	font-family "PF Beau Sans Pro"
 	font-weight: 900
+	text-align: center
 	&:hover
 		cursor pointer
 

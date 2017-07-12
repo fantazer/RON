@@ -1,0 +1,75 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.title-row
+			a(href="#")
+				+icon("round-arrow-left","icon")
+			span Две половинки
+		.part
+			.part-cont
+				.part-row
+					.part-title Тесто
+					.part-info
+						.part-weight
+							.part-weight-el.part-weight-el--active
+								.part-weight__icon
+									+icon("fat","icon")
+								.part-weight__title Толстое
+							.part-weight-el
+								.part-weight__icon
+									+icon("thin","icon")
+								.part-weight__title Тонкое
+				.part-row
+					.part-title Размер
+					.part-info
+						.card-size
+							.card-size__el.card-size__el--active
+								.card-size__val 25
+								.card-size__type см
+							-
+								var items = [
+								'31',
+								'36',
+								'40'
+								];
+							each item in items
+								.card-size__el
+									.card-size__val #{item}
+									.card-size__type см
+				.part-row
+					.part-title Соус
+					.part-info
+						.souse
+							.souse__el.souse__el--active
+								.souse__type.souse__type--red
+								.souse__name Красный
+							.souse__el
+								.souse__type.souse__type--green
+								.souse__name Зеленый
+
+				.title-foundation Выберите 2 основы
+				.foundation
+					- for (var i=0;i<5;i++)
+						+foundation()
+					+foundation(type='foundation__el--active')
+					+foundation(type='foundation__el--default')
+				.part-ingr-title Добавить ингредиенты
+				.part-ingr-cont
+					.part-ingr-el На левую
+					.part-ingr-el На всю
+					.part-ingr-el На правую
+			.part-img
+				.part-img__el(style="background-image:url('img/pizza-part.png')")
+				.ing-row
+					- for (var i=0;i<6;i++)
+						.ing-el
+				.part-img__total итого:
+					span 476г./400 р.
+				a(href="#").part-img__get в корзину
+				.part-img__reset Сбросить
++footer()
+
+include ./block_html/_script.pug

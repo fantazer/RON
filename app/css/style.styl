@@ -399,7 +399,7 @@ body
 	up()
 	@extend .type--xl
 	font-family "PF Beau Sans Pro"
-	margin-bottom: 40px
+	margin-bottom: 50px
 	position: relative
 	f()
 	align-items: center
@@ -543,9 +543,11 @@ body
 	bgi('sale-bg.jpg')
 	bg-full()
 //.main-cont
+
 .sale-content
 	flex(mid)
 	fw()
+
 .sale-content__el
 	padding: 20px
 	width: 30%
@@ -554,4 +556,272 @@ body
 	margin-right: 20px
 	margin-bottom: 20px
 	br(10px)
+
+.title-row
+	@extend .type--xl
+	text-align: center
+	padding: 45px 0
+	position: relative
+	font-family "PF Beau Sans Pro"
+	border-bottom:1px solid #dedede
+	margin-bottom: 50px
+	.icon
+		tr(all)
+		size 50px
+		opacity .2
+		left: 0
+		position: absolute
+		margin-top: 10px
+		&:hover
+			opacity 1
+
+.part
+	f()
+	justify-content: space-between
+	align-items:flex-start
+
+.part-cont
+	width: 50%
+
+.part-row
+	flex(between)
+	border-radius 40px
+	border 1px solid #c9c9c9
+	background-color #ffffff
+	padding: 20px 30px
+	margin-bottom: 20px
+	height: 80px
+
+.part-title
+	@extend .type--md
+	font-weight: 500
+	width: 30%
+
+.part-info
+	width: 70%
+
+.part-weight
+	f()
+	justify-content: center
+
+.part-weight-el
+	cp()
+	flex(mid)
+	width: 50%
+	opacity .6
+	tr(all)
+	.icon
+		size 30px
+		margin-right: 20px
+
+.part-weight-el--active
+	opacity 1
+
+.souse
+	flex(between)
+
+.souse__el
+	flex(mid)
+	align-items: center
+	width: 50%
+
+.souse__el--active
+	.souse__name
+		opacity 1
+
+.souse__type
+	round()
+	size 25px
+	margin-right: 20px
+
+.souse__type--red
+	background: red
+
+.souse__name
+	font-weight: 500
+	opacity .6
+	cp()
+
+.souse__type--green
+	background: green
+
+.title-foundation
+	@extend .type--md
+	font-weight: 500
+	margin-top: 40px
+	margin-bottom: 20px
+	text-align: center
+
+.foundation
+	f()
+	fw()
+	margin-bottom: 35px
+
+.part-ingr-title
+	@extend .type--md
+	font-weight: 500
+	margin-top: 40px
+	margin-bottom: 20px
+	text-align: center
+
+.part-ingr-cont
+	flex(between)
+	background-color rgba(255, 196, 0, 0)
+	height: 60px
+	overflow hidden
+
+.part-ingr-el
+	flex-grow 1
+	height: 100%
+	flex(mid)
+	tr(background)
+	cp()
+	font-weight 500
+	&:hover
+		background: #f0f0f0
+	&:nth-child(1)
+		border 1px solid #d2d2d2
+		border-radius 30px 0px 0px 30px
+	&:nth-child(2)
+		border-top 1px solid #d2d2d2
+		border-bottom 1px solid #d2d2d2
+	&:nth-child(3)
+		border 1px solid #d2d2d2
+		border-radius 0px 30px 30px 0px
+
+.part-ingr-el--active
+	background: yellow!important
+	border 0!important
+
+.part-weight__title
+	font-weight: 500
+
+.part-img
+	width: 40%
+	padding: 40px
+	border-radius 19px
+	border 1px solid #ececec
+
+.part-img__el
+	width: 100%
+	padding: 50% 0
+	bg-full()
+	background-size: contain
+
+.ing-row
+	flex(between)
+	margin-bottom: 40px
+
+.ing-el
+	size 45px
+	border 1px solid $border-color
+	br(4px)
+
+.part-img__total
+	@extend .type--md
+	font-weight: 500
+	text-align: center
+	color rgba(0, 0, 0, 0.6)
+	margin-bottom: 40px
+	span
+		color black
+
+.part-img__get
+	@extend .btn--lg
+	@extend .btn--yellow
+	width: 100%
+	text-align: center
+	margin-bottom: 40px
+
+.part-img__reset
+	@extend .link--text
+	text-align: center
+	cp()
+
+.souse-cont
+	f()
+	fw()
+	margin-bottom: 70px
+
+.order
+	f()
+	justify-content:space-between
+	align-items flex-start
+
+.order-cont
+	width: 68%
+
+.order-info
+	width: 30%
+
+.order-item
+	margin-bottom: 70px
+	.basket__el-info
+		width: 55%
+	.basket__el-change
+		width: 45%
+
+.random-souse
+	@extend .link--blue
+
+.order-text-souse
+	margin-bottom: 70px
+	line-height: 1.6
+
+.order-add
+	f()
+	fw()
+	.product-el
+		item(2,20px)
+
+.order-info
+	background: red
+	br(10px)
+//.order-info-cont
+.order-info-head
+	padding: 45px 40px
+	color white
+	flex(mid)
+	fl()
+	fw()
+	border-bottom 2px dashed #ff6e76
+.order-total-text
+	text-align: center
+	margin-bottom: 15px
+
+.order-total-cost
+	font-family "PF Beau Sans Pro"
+	font-size 30px
+	font-weight 900
+	text-align: center
+	margin-bottom: 30px
+
+.order-total-get
+	@extend .btn--lg
+	@extend .btn--yellow
+	padding: 20px 75px;
+	width: 100%
+
+.order-info-footer
+	padding: 45px 40px
+	flex(mid)
+	fl()
+	fw()
+	.promo
+		margin-bottom: 30px
+		placeholder(rgba(255, 249, 255, 0.7))
+	.promo-input
+		background: none
+		color white
+.order-how
+	tr(all)
+	text-align: center
+	display: block
+	text-decoration: underline
+	color white
+	opacity 0.7
+	&:hover
+		opacity 1
+
+
 @import "../module/**/*"

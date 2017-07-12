@@ -2,11 +2,15 @@
 	"block":{
 		"header":"header",
 		"footer":"footer",
-		"product":"product"
+		"product":"product",
+		"foundation":"foundation",
+		"item-incr":"item-incr"
 	},
 	"page":{
 		"index":"index",
 		"catalog":"catalog",
-		"card":"card"
+		"card":"card",
+		"part":"part",
+		"order":"order"
 	}
 }

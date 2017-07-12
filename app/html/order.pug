@@ -1,0 +1,58 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.title-row
+			a(href="#")
+				+icon("round-arrow-left","icon")
+			span Ваш заказ
+		.order
+			.order-cont
+				.order-item
+					- for (var i=0;i<3;i++)
+						.basket__el
+							.basket__el-info
+								.basket__img(style="background-image:url('img/item-pizza-1.png')")
+								.basket__name
+									.basket__name-text Малибу
+									.basket__name-link Добавить ингредиенты
+							.basket__el-change
+								.basket__inc
+									+incr()
+								.basket__price 120 р.
+								.basket__delete
+									+icon("garbage","icon")
+
+				.title.title--md Дополнительные Соусы
+				.order-text-souse Вам доступно: 1 бесплатный соус.
+					span.random-souse Выбрать случайные соусы <br>
+					|	К каждой пицце и некоторым закускам можно заказать бесплатный порционный соус.Также вы можете заказать дополнительный платный соус.
+				.souse-cont
+					- for (var i=0;i<5;i++)
+						+item-incr()
+
+				.title.title--md ЧТо нибудь еще?
+
+				.order-add
+					- for (var i=0;i< 3;i++)
+						+product()
+			
+			.order-info
+				.order-info-cont
+					.order-info-head
+						.order-total-text Сумма заказа:
+						.order-total-cost 12 000 р.
+						a(href="#").order-total-get Оформить
+					.order-info-footer
+						.promo
+							input(type="text" placeholder="Промокод").promo-input
+							.promo-get
+								+icon("arrow-custom","icon")
+						a(href="#").order-how Как получить промокод?
+						
+			
++footer()
+
+include ./block_html/_script.pug

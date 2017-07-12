@@ -93,7 +93,6 @@ $(document).ready(function(){
 	var shrinkHeader = 400;
 	var needScroll  = false;
 	$(window).scroll(function() {
-			var heightHeader=$('.header-main-wrap').height();
 	    var scroll = $(this).scrollTop();
 	    if (scroll  > shrinkHeader ) {
 	    	needScroll = true;
@@ -102,23 +101,18 @@ $(document).ready(function(){
 					var heightHeader=$('.header-main-wrap').height();
 					$('.header-main-wrap').addClass('shrink');
 					$('.header-main-wrap').removeClass('shrinkUp');
-					$('body').css({
-						paddingTop:heightHeader
-					});
         }
         else {
             $('.header-main-wrap').removeClass('shrink');
-            $('body').css({
-            	paddingTop:"0px"
-            });
+
         }
-        if ( scroll <= shrinkHeader &&  scroll >= 100 && needScroll) {
-        	$('.header-main-wrap').addClass('shrinkUp');
-        	needScroll = false;
-        }
-        if ( scroll <=  100 ) {
-        	$('.header-main-wrap').removeClass('shrinkUp');
-        }
+        // if ( scroll <= shrinkHeader &&  scroll >= 200 && needScroll) {
+        // 	$('.header-main-wrap').addClass('shrinkUp');
+        // 	needScroll = false;
+        // }
+        // if ( scroll <=  200 ) {
+        // 	$('.header-main-wrap').removeClass('shrinkUp');
+        // }
 	});
 	//animate header end
 
@@ -187,6 +181,35 @@ $(document).ready(function(){
 		});
 	//card thin or fat-end
 
+	//foundation toggle
+		$('.foundation__el').click(function () {
+			if(!$(this).hasClass('foundation__el--default')){
+				$(this).toggleClass('foundation__el--active');
+			}
+		});
+	//foundation toggle-end
+
+	//choose part for ingr
+	$('.part-ingr-el').click(function () {
+			$('.part-ingr-el').removeClass('part-ingr-el--active');
+			$(this).addClass('part-ingr-el--active');
+		});
+	//choose part for ingr end
+
+	//part choose fat or thin
+	$('.part-weight-el').click(function () {
+			$('.part-weight-el').removeClass('part-weight-el--active');
+			$(this).addClass('part-weight-el--active');
+		});
+	//part choose fat or thin end
+
+
+	//part choose souse
+	$('.souse__el').click(function () {
+			$('.souse__el').removeClass('souse__el--active');
+			$(this).addClass('souse__el--active');
+		});
+	//part choose souse end
 	//Stick panel
 	// ===== for template header =====
 	//See mixin header
