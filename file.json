@@ -4,7 +4,8 @@
 		"footer":"footer",
 		"product":"product",
 		"foundation":"foundation",
-		"item-incr":"item-incr"
+		"item-incr":"item-incr",
+		"modal":"modal"
 	},
 	"page":{
 		"index":"index",

@@ -761,6 +761,14 @@ body
 	.basket__el-change
 		width: 45%
 
+.basket__el
+	width: 100%!important
+
+.slick-list
+	min-height 184px!important
+	+below(1024px)
+		max-height auto!imprtant
+
 .random-souse
 	@extend .link--blue
 
@@ -823,5 +831,49 @@ body
 	&:hover
 		opacity 1
 
+.header__sub-arrow
+	+below(1024px)
+		display none
+	flex(mid)
+	cp()
+	.icon
+		size 20px
 
+.basket-container
+	width: 100%!important
+
+.slick-arrow
+	outline none
+
+.input-row
+	position: relative
+
+.input-placeholder-val
+	tr(all)
+	position: absolute
+	left 20px
+	top 18px
+	opacity 0.5
+
+.input-animate
+	display: inline-block
+	z-index 20
+	color black
+
+
+.input-animate:focus+span,
+.input-animate[data-empty="false"] + span
+	top 3px
+	font-size: 10px
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
 @import "../module/**/*"

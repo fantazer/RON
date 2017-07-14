@@ -1,0 +1,67 @@
+mixin modal()
+	//block modal
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+
+				//modal-registration
+				.modal(data-modal="registration")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Регистрация
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Ваше имя").input-animate
+							.input-cont.input-cont--half
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+								.input-row
+									input(type="text"  data-input="Email").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Пароль").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Повторите пароль").input-animate
+							.modal-get
+								input(type="submit" value="Зарегистрировать").btn--lg.btn--yellow
+				//modal-registration-end
+
+				//modal-enter
+				.modal(data-modal="enter")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Авторизация
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Пароль").input-animate
+							.modal-foget
+								.link--blue Забыли пароль ?
+							.modal-get
+								input(type="submit" value="Войти").btn--lg.btn--yellow
+							.modal-account
+								.link--text.modal-get(data-modal="registration") Нет аккаунта? зарегистрироваться
+				//modal-enter-end
+
+				//modal-town
+				.modal(data-modal="town")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Выберите город
+					.modal-content.modal-content--town
+						.modal-town
+							.modal-town__el.toggle-close-modal Москва
+							.modal-town__el.toggle-close-modal Тольяти
+				//modal-town-end
+	//block modal end

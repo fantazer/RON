@@ -47,7 +47,7 @@ $(document).ready(function(){
 	$('.incr__plus').click(function () {
 	    var $input = $(this).parent().find('.incr__val span');
 	    var count = parseInt($input.html()) + 1;
-	    count = count > 10 ? 10 : count;
+	    count = count > 100 ? 100 : count;
 	    $input.html(count);
 	});
 
@@ -88,6 +88,40 @@ $(document).ready(function(){
 			$('.basket-wrap').removeClass('bounce-show');
 	});
 	//toggle basket end
+
+	//remove item in basket
+
+	// function for valide number item in cart
+	var cartSliderItem = function () {
+		$('.basket-container').slick('reinit');
+			if(!$('.basket__el').length){
+				$('.header-cart').click();
+			}
+			if($('.basket__el').length < 3){
+				$('.slick-arrow').hide()
+			} else {
+				$('.slick-arrow').show()
+			}
+	}
+
+	$('.basket__delete').click(function () {
+			$(this).closest('.basket__el').remove();
+			cartSliderItem();
+	});
+	//remove item in basket end
+
+
+	//remove item in basket by decrement
+	var Incr;
+
+	$('.basket__el .incr__nav').click(function () {
+		Incr = $(this).closest('.incr').find('.incr__val span').html()*1;
+		if(Incr == 0){
+			$(this).closest('.basket__el').remove();
+			cartSliderItem();
+		}
+	});
+	//remove item in basket by decrement end
 
 	//animate header
 	var shrinkHeader = 400;
@@ -210,6 +244,82 @@ $(document).ready(function(){
 			$(this).addClass('souse__el--active');
 		});
 	//part choose souse end
+
+
+	//cart vertical slider
+	var initSlider = function(){
+		$('.basket-container').not('.slick-initialized').slick({
+		  slidesToShow: 2,
+		  autoplay: false,
+		  speed: 500,
+		  vertical:true,
+		  arrows: true,
+		  prevArrow: $('.header__sub-arrow-up'),
+		  nextArrow: $('.header__sub-arrow-down'),
+		  verticalSwiping:true,
+		  infinite:false,
+		  responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: "unslick"
+                }
+            ]
+		});
+	};
+	initSlider();
+	//cart vertical slider edn
+
+
+
+	//init modal
+	var closeModal = function () {
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-open")
+	};
+
+	$('.modal-close , .modal-filter').click(function (){
+		closeModal();
+	});
+
+	$('.modal-get').click(function (){
+		if(!$('.modal-layer').hasClass('modal-layer-show')){
+			$('.modal-layer').addClass('modal-layer-show');
+		}
+		if(!$("body").addClass("modal-open")){
+			$("body").addClass("modal-open");
+		}
+		var currentModal = $(this).data("modal");
+		$('.modal').each(function () {
+			if ($(this).data('modal')===currentModal){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+
+	});
+
+	$('.toggle-close-modal').click(function (){
+		closeModal();
+	});
+	//init modal-end
+
+	//init animate placeholder
+	$('.input-animate').each(function(){
+		var current = $(this);
+		var dataString = "<span class='input-placeholder-val'>"+current.data('input')+"</span>";
+		current.parent().append(dataString);
+	});
+
+	$('.input-animate').on('input', function (e) {
+		$(e.currentTarget).attr('data-empty', !e.currentTarget.value);
+	});
+
+	$('.input-placeholder-val').click(function(){
+		$(this).parent().find('.input-animate').focus(); //найти Input и повесить focus
+	});
+	//init animate placeholder end
+
 	//Stick panel
 	// ===== for template header =====
 	//See mixin header

@@ -1,0 +1,103 @@
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	flex(mid)
+	width: 100%
+	height: 100%
+	position: relative
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100%
+
+
+.modal
+	background: white
+	position: relative
+	width: 580px
+	display: none
+	br(10px)
+	overflow hidden
+
+.input-cont
+	margin-bottom: 20px
+	input
+		width: 100%
+
+.input-cont--half
+	flex(between)
+	.input-row
+		width: 48%
+
+.modal__show
+	display: block
+
+.modal-close
+	position: absolute
+	top: 30px
+	right: 30px
+	cp()
+	.icon
+		size 24px
+		fill black
+
+.modal-header
+	@extend .type--lg
+	background: yellow
+	padding: 30px
+	text-align: center
+	font-family "PF Beau Sans Pro"
+
+.modal-content
+	padding: 30px
+
+.modal-get
+	flex(mid)
+	padding: 20px 0
+	.btn--lg
+		padding: 15px 50px
+		width: 70%
+
+.modal-foget
+	cp()
+	margin-bottom: 30px
+
+.modal-account
+	cp()
+	margin-top: -20px
+
+.modal-town
+	flex(mid)
+	fl()
+	fw()
+
+.modal-town__el
+	@extend .type--md
+	text-align: center
+	margin-bottom: 30px
+	font-weight 500
+	display: inline-block
+	border-bottom: 1px dotted black
+	cp()
+	&:last-child
+		margin-bottom: 0
+
+.modal-content--town
+	padding: 50px 0
