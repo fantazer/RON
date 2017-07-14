@@ -11,7 +11,7 @@ include block_html/_include.pug
 					.card-img__text Кликните по изображению <br>для увеличения
 			.card-info
 				.card__title
-					a(href="#")
+					.title-row-back
 						+icon("round-arrow-left","icon")
 					span Рокки Роутс
 				.card-tag
@@ -43,28 +43,45 @@ include block_html/_include.pug
 
 				.card-type
 					.card-type__wrap
-						.card-type__el.card-type__el--active
+						.card-type__el.card-type__el--active(data-size="fat")
 							.card-type__icon
 								+icon("fat","icon")
 							.card-type__text Толстое тесто
-						.card-type__el
+						.card-type__el(data-size="thin")
 							.card-type__icon
 								+icon("thin","icon")
 							.card-type__text Тонкое тесто
-					.card-size
-						.card-size__el.card-size__el--active
-							.card-size__val 25
-							.card-size__type см
-						-
-							var items = [
-							'31',
-							'36',
-							'40'
-							];
-						each item in items
-							.card-size__el
-								.card-size__val #{item}
+
+					.product-size-wrap(data-size="fat")
+						.card-size
+							.card-size__el.size-disable
+								.card-size__val 25
 								.card-size__type см
+							.card-size__el.card-size__el--active
+								.card-size__val 31
+								.card-size__type см
+							.card-size__el
+								.card-size__val 36
+								.card-size__type см
+							.card-size__el
+								.card-size__val 40
+								.card-size__type см
+
+					.product-size-wrap.product-size-wrap--thin(data-size="thin")
+						.card-size
+							.card-size__el.card-size__el--active
+								.card-size__val 25
+								.card-size__type см
+							-
+								var items = [
+								'31',
+								'36',
+								'40'
+								];
+							each item in items
+								.card-size__el
+									.card-size__val #{item}
+									.card-size__type см
 
 				.card-total
 					.card-total__info

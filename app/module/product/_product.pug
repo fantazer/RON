@@ -12,36 +12,52 @@ mixin product()
 					+icon("arrow-down","icon")
 			.product-info
 				.product-type
-					.product-type__el.product-thin.product-type--active
+					.product-type__el.product-thin.product-type--active(data-size="fat")
 						.product-type__icon
 							+icon("fat","icon")
 						.product-type__name Толстое тесто
-					.product-type__el.product-fat
+					.product-type__el.product-fat(data-size="thin")
 						.product-type__icon
 							+icon("thin","icon")
 						.product-type__name Тонкое тесто
 				.product-type-condition
 					.product-type-condition-row
 						.product-type-condition-el
-				.product-size
-					.product-size__el.product-size__el--active
-						.product-size__val 25
-						.product-size__type см
-					-
-						var items = [
-							'31',
-							'36',
-							'40'
-							];
-					each item in items
-						.product-size__el
-							.product-size__val #{item}
-							.product-size__type см
+
+					.product-size-wrap.product-size-wrap--thin(data-size="thin")
+						.product-size
+							.product-size__el.size-disable
+								.product-size__val 25
+								.product-size__type см
+							.product-size__el.product-size__el--active
+								.product-size__val 31
+								.product-size__type см
+							.product-size__el
+								.product-size__val 36
+								.product-size__type см
+							.product-size__el
+								.product-size__val 40
+								.product-size__type см
+					.product-size-wrap(data-size="fat")
+						.product-size
+							.product-size__el.product-size__el--active
+								.product-size__val 25
+								.product-size__type см
+							-
+								var items = [
+								'23',
+								'36',
+								'40'
+								];
+							each item in items
+								.product-size__el
+									.product-size__val #{item}
+									.product-size__type см
 				.product-width 456 г.
 		.product-footer
 			.product-price от 860 р.
 			.product-get Выбрать
-			.product-add Добавить
+			.product-add.toggle-cart-animate Добавить
 			.product-incr
 				+incr()
 

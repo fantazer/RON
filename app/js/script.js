@@ -105,6 +105,7 @@ $(document).ready(function(){
 	}
 
 	$('.basket__delete').click(function () {
+
 			$(this).closest('.basket__el').remove();
 			cartSliderItem();
 	});
@@ -124,7 +125,7 @@ $(document).ready(function(){
 	//remove item in basket by decrement end
 
 	//animate header
-	var shrinkHeader = 400;
+	var shrinkHeader = 250;
 	var needScroll  = false;
 	$(window).scroll(function() {
 	    var scroll = $(this).scrollTop();
@@ -173,7 +174,20 @@ $(document).ready(function(){
 		});
 
 		//Type thin fat
+
+
 		$('.product-type__el').click(function () {
+
+			//Tab thin fat sizes
+			var currentSize = $(this).data('size');
+			$(this).closest('.product-info').find('.product-size-wrap').each(function () {
+				$(this).hide();
+				if ($(this).data('size')==currentSize){
+					$(this).show()
+				}
+			});
+			//Tab thin fat sizes end
+
 			$(this).closest('.product-info').find('.product-type__el').removeClass('product-type--active');
 			$(this).addClass('product-type--active');
 			if($(this).hasClass('product-fat')){
@@ -210,8 +224,19 @@ $(document).ready(function(){
 
 	//card thin or fat
 	$('.card-type__el').click(function () {
+			//Tab thin fat sizes
+			var currentSize = $(this).data('size');
+			$(this).closest('.card-type').find('.product-size-wrap').each(function () {
+				$(this).hide();
+				if ($(this).data('size')==currentSize){
+					$(this).show()
+				}
+			});
+			//Tab thin fat sizes end
+
 			$('.card-type__el').removeClass('card-type__el--active');
 			$(this).addClass('card-type__el--active');
+
 		});
 	//card thin or fat-end
 
@@ -232,6 +257,16 @@ $(document).ready(function(){
 
 	//part choose fat or thin
 	$('.part-weight-el').click(function () {
+			//Tab thin fat sizes
+			var currentSize = $(this).data('size');
+			$('.product-size-wrap').each(function () {
+				$(this).hide();
+				if ($(this).data('size')==currentSize){
+					$(this).show()
+				}
+			});
+			//Tab thin fat sizes end
+
 			$('.part-weight-el').removeClass('part-weight-el--active');
 			$(this).addClass('part-weight-el--active');
 		});
@@ -319,6 +354,24 @@ $(document).ready(function(){
 		$(this).parent().find('.input-animate').focus(); //найти Input и повесить focus
 	});
 	//init animate placeholder end
+
+
+	//animate cart on add
+
+	$('.toggle-cart-animate').add('.incr__nav').click(function () {
+		$('.header-cart').addClass('animate-basket');
+		setTimeout(function(){
+				$('.header-cart').removeClass('animate-basket');
+			}, 400);
+	});
+	//animate cart on add end
+
+	//history back
+	$(".title-row-back").click(function(event) {
+    event.preventDefault();
+    history.back(1);
+	});
+	//history back end
 
 	//Stick panel
 	// ===== for template header =====
@@ -478,3 +531,5 @@ $(document).ready(function(){
 	catch( e ){}
 
 }( window, document ) );
+
+

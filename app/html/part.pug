@@ -5,7 +5,7 @@ include block_html/_include.pug
 .content
 	.main-cont
 		.title-row
-			a(href="#")
+			.title-row-back
 				+icon("round-arrow-left","icon")
 			span Две половинки
 		.part
@@ -14,31 +14,46 @@ include block_html/_include.pug
 					.part-title Тесто
 					.part-info
 						.part-weight
-							.part-weight-el.part-weight-el--active
+							.part-weight-el.part-weight-el--active(data-size="fat")
 								.part-weight__icon
 									+icon("fat","icon")
 								.part-weight__title Толстое
-							.part-weight-el
+							.part-weight-el(data-size="thin")
 								.part-weight__icon
 									+icon("thin","icon")
 								.part-weight__title Тонкое
 				.part-row
 					.part-title Размер
 					.part-info
-						.card-size
-							.card-size__el.card-size__el--active
-								.card-size__val 25
-								.card-size__type см
-							-
-								var items = [
-								'31',
-								'36',
-								'40'
-								];
-							each item in items
-								.card-size__el
-									.card-size__val #{item}
+						.product-size-wrap.product-size-wrap--thin(data-size="thin")
+							.card-size
+								.card-size__el.size-disable
+									.card-size__val 25
 									.card-size__type см
+								.card-size__el.card-size__el--active
+									.card-size__val 31
+									.card-size__type см
+								.card-size__el
+									.card-size__val 36
+									.card-size__type см
+								.card-size__el
+									.card-size__val 40
+									.card-size__type см
+						.product-size-wrap(data-size="fat")
+							.card-size
+								.card-size__el.card-size__el--active
+									.card-size__val 25
+									.card-size__type см
+								-
+									var items = [
+									'31',
+									'36',
+									'40'
+									];
+								each item in items
+									.card-size__el
+										.card-size__val #{item}
+										.card-size__type см
 				.part-row
 					.part-title Соус
 					.part-info

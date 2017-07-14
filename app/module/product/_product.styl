@@ -3,7 +3,7 @@
 	border 2px solid #f8f8f8
 	background-color #ffffff
 	tr(all)
-	cp()
+	//cp()
 	&:hover
 		border 2px solid #e6e6e6
 		.product__img-el
@@ -144,7 +144,7 @@
 
 .product-size
 	flex(between)
-	margin-bottom: 30px
+	margin: 30px 0
 
 .product-size__el
 	round()
@@ -152,6 +152,7 @@
 	fl()
 	fw()
 	tr(all)
+	cp()
 	size 60px
 	border: 2px solid #ffffff;
 	background-color: rgba(252, 202, 3, 0);
@@ -249,4 +250,14 @@
 		display: flex
 	.product-get
 		display: none
+
+.product-size-wrap--thin
+	display: none
+
+.size-disable
+	opacity .2
+	pointer-events none
+	&:hover
+		cursor none
+
 //.elements-icr-block

@@ -12,6 +12,7 @@
 		"catalog":"catalog",
 		"card":"card",
 		"part":"part",
-		"order":"order"
+		"order":"order",
+		"order-form":"order-form"
 	}
 }
