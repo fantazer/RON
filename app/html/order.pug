@@ -1,7 +1,8 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.small-header
+	+header()
 .content
 	.main-cont
 		.title-row
@@ -25,7 +26,7 @@ include block_html/_include.pug
 								.basket__delete
 									+icon("garbage","icon")
 
-				.title.title--md Дополнительные Соусы
+				.title.title--md.title-mobile Дополнительные Соусы
 				.order-text-souse Вам доступно: 1 бесплатный соус.
 					span.random-souse Выбрать случайные соусы <br>
 					|	К каждой пицце и некоторым закускам можно заказать бесплатный порционный соус.Также вы можете заказать дополнительный платный соус.
@@ -33,26 +34,27 @@ include block_html/_include.pug
 					- for (var i=0;i<5;i++)
 						+item-incr()
 
-				.title.title--md ЧТо нибудь еще?
+				.title.title--md.title-mobile ЧТо нибудь еще?
 
 				.order-add
 					- for (var i=0;i< 3;i++)
 						+product()
 			
-			.order-info
-				.order-info-cont
-					.order-info-head
-						.order-total-text Сумма заказа:
-						.order-total-cost 12 000 р.
-						a(href="#").order-total-get Оформить
-					.order-info-footer
-						.promo
-							input(type="text" placeholder="Промокод").promo-input
-							.promo-get
-								+icon("arrow-custom","icon")
-						a(href="#").order-how Как получить промокод?
+			.order-info-wrap
+				.order-info
+					.order-info-cont
+						.order-info-head
+							.order-total-text Сумма заказа:
+							.order-total-cost 12 000 р.
+							a(href="#").order-total-get Оформить
+						.order-info-footer
+							.promo
+								input(type="text" placeholder="Промокод").promo-input
+								.promo-get
+									+icon("arrow-custom","icon")
+							a(href="#").order-how Как получить промокод?
 						
-			
 +footer()
-
++modal()
++mobile-menu()
 include ./block_html/_script.pug

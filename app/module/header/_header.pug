@@ -25,6 +25,10 @@ mixin header()
 		.header-main-wrap
 			.main-cont
 				.header-main
+					a(href="#mobile-menu").header-mobile-togle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
+
 					a(href="#").header-main__logo
 						img(src="img/logo.svg", alt="")
 					.header-info__wrap
@@ -41,6 +45,9 @@ mixin header()
 								.header-info__text Работаем
 								.header-info__text с 11:00 до 23:00!
 					.header-nav
+						.header-contact-mobile
+							.header-contact-mobile__time с 10:00 до 03:00
+							a(href="tel:8-800-350-06-05").header-contact-mobile__phone 8-800-350-06-05
 						.header-menu
 							.header-menu__cont
 								+icon("menu","icon icon-menu")

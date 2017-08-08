@@ -35,13 +35,14 @@ mixin radio(text,group,disable)
           .icon-radio
         .sytle-input-text=text
 
-mixin incr()
+mixin incr(a)
+  - a = a || 1
   .elements-icr-block
     .incr
       .incr__minus.incr__nav
         +icon("minus","icon")
       .incr__val
-        span 1
+        span=a
         .incr__val-coner
       .incr__plus.incr__nav
         +icon("plus","icon")

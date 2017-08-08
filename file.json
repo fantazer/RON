@@ -5,7 +5,8 @@
 		"product":"product",
 		"foundation":"foundation",
 		"item-incr":"item-incr",
-		"modal":"modal"
+		"modal":"modal",
+		"mobile-menu":"mobile-menu"
 	},
 	"page":{
 		"index":"index",

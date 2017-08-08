@@ -1,0 +1,48 @@
+mixin mobile-menu()
+	//block mobile-menu
+	nav#mobile-menu
+		ul.mobile-menu__one-lvl
+			li.mobile-menu-el
+				span Меню
+				ul.mobile-menu__two-lvl
+					-
+						var menu = [
+							'Две половинки',
+							'Комбо',
+							'Закуски',
+							'Салаты',
+							'Десерты',
+							'Напитки'
+							];
+					each val in menu
+						li.mobile-menu-el
+							a(href="#").header__sub-menu__el
+								.header__sub-menu__el-text  #{val}
+			-
+				var items = [
+					'Акции',
+					'Доставка',
+					'Отзывы',
+					'О компании',
+					'Новости'
+					];
+			each item in items
+				li.mobile-menu-el
+					a(href="#") #{item}
+
+
+			li.mobile-menu-el.mobile-menu-el--sub
+				span Ваш Регион
+				ul.mobile-menu__two-lvl
+					- for (var i = 0; i < 8; i++)
+						li.mobile-menu-el
+							a(href="#") Регион новый #{i}
+
+			li.mobile-menu-el.mobile-menu-el--sub
+				span Личный кабинет
+				ul.mobile-menu__two-lvl
+					li.mobile-menu-el 
+						span.modal-get(data-modal="enter") Вход
+					li.mobile-menu-el 
+						span.modal-get(data-modal="registration") Регистрация
+	//block mobile-menu end

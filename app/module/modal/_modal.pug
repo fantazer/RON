@@ -46,7 +46,7 @@ mixin modal()
 								.input-row
 									input(type="password"  data-input="Пароль").input-animate
 							.modal-foget
-								.link--blue Забыли пароль ?
+								.link--blue.show-modal(data-modal="pass") Забыли пароль ?
 							.modal-get
 								input(type="submit" value="Войти").btn--lg.btn--yellow
 							.modal-account
@@ -64,4 +64,20 @@ mixin modal()
 							.modal-town__el.toggle-close-modal Москва
 							.modal-town__el.toggle-close-modal Тольяти
 				//modal-town-end
+
+
+				//modal-pass
+				.modal(data-modal="pass")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Восстановление пароля
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+							.modal-get
+								input(type="submit" value="Восстановить").btn--lg.btn--yellow
+				//modal-pass-end
 	//block modal end

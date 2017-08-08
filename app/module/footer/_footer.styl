@@ -4,16 +4,29 @@
 	background: white
 
 .footer-top
+	+below(768px)
+		fw()
+		padding: 20px 0
 	padding: 35px 0
 	f()
 	justify-content: center
 
 .footer-top__el
+	+below(768px)
+		width: 100%
+		padding: 5px 10px
+		border 0
+		text-align: center
+		font-size: 10px
 	width: 25%
 	padding: 35px 50px 50px 20px
 	line-height: 1.6
 	border-left: 1px solid #f0f0f0
 	&:nth-child(1)
+		+below(768px)
+			padding: 5px 10px
+			br
+				display: none
 		padding-left: 0
 		border: 0
 
@@ -22,21 +35,34 @@
 	border-top:1px solid  #f0f0f0
 
 .footer-bottom
+	+below(768px)
+		padding: 20px
+		flex(mid)
+		fl()
 	f()
 	padding: 50px 0
 	justify-content: space-between
 
 .footer-bottom__copy
+	+below(768px)
+		width: 100%
+		text-align: center
+		margin-bottom: 10px
 	width: 18%
 
+
 .footer-bottom__copy-text
+	+below(768px)
+		margin-bottom: 10px
 	margin-bottom:30px
 
 .footer-bottom__copy-link
 	@extend .link--text
 
 .footer-menu
-	width: 50%
+	+below(768px)
+		display: none
+	width: 45%
 
 .footer-menu__col
 	f()
@@ -49,9 +75,16 @@
 	margin-bottom: 20px
 
 .footer-info
-	width: 20%
+	+below(768px)
+		width: 100%
+	width: 25%
 
 .footer-pay
+	+below(768px)
+		flex(mid)
+		fl()
+		text-align: center
+		padding-bottom: 10px
 	f()
 	align-items: center
 	padding-bottom: 30px
@@ -59,6 +92,9 @@
 	border-bottom:1px solid #f0f0f0
 
 .footer-pay__icon
+	+below(768px)
+		margin-right: 0
+		margin-bottom: 10px
 	margin-right: 25px
 	background: yellow
 	round()
@@ -66,9 +102,11 @@
 	flex(mid)
 	.icon
 		size 30px
-//.footer-pay__text
+.footer-pay__text
+	width: calc(100% - 80px)
 
-//.footer-call
+.footer-call
+	text-align: center
 .footer-phone
 	@extend .type--md
 	display: inline-block

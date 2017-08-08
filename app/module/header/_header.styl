@@ -5,6 +5,8 @@
 	height: 218px
 
 .header-top-wrap
+	+below(768px)
+		display: none
 	padding: 20px 0
 	background: rgba(0, 0, 0, 0.30)
 
@@ -33,6 +35,8 @@
 		opacity 1
 
 .header-top__nav-wrap
+	+below(1024px)
+		width: 45%
 	width: 30%
 	flex(between)
 
@@ -65,19 +69,32 @@
 
 //.header-top__auth-regist
 .header-main-wrap
+	+below(768px)
+		.main-cont
+			padding: 0
+	//background: #326cad
 	position: relative
 
 .header--main-page
+	+below(768px)
+		height: 200px
 	height: 620px
 	bgi('main-baner.jpg');
 	bg-full()
 
 .header-main
+	+below(768px)
+		padding: 0
+		box-shadow 1px 0px 5px
 	f()
 	align-items: center
 	padding: 10px 0
 
 .header-main__logo
+	+below(1024px)
+		margin-right: 3%
+	+below(768px)
+		size 40px
 	width: 100px
 	display: block
 	margin-right: 7%
@@ -117,6 +134,8 @@
 	color white
 
 .header-menu
+	+below(768px)
+		display: none
 	br(30px)
 	cp()
 	tr(all)
@@ -136,6 +155,8 @@
 		font-weight: 500
 
 .header-cart
+	+below(768px)
+		br(0px)
 	round()
 	flex(mid)
 	cp()
@@ -152,6 +173,11 @@
 		display: none
 
 .header-cart__val
+	+below(768px)
+		size 20px
+		font-size: 10px
+		top 3px
+		right: 3px
 	round()
 	flex(mid)
 	position: absolute
@@ -166,6 +192,10 @@
 	margin-left: auto
 
 .header-info__wrap
+	+below(1024px)
+		width: 50%
+	+below(768px)
+		display: none
 	flex(between)
 	width: 40%
 
@@ -232,19 +262,18 @@
 	position fixed!important
 	top 0
 	left 0
-	background white!important
 	width 100%
 	margin 0
 	z-index 9999
 	.header-info__icon
 		.icon
-			fill black
+			fill white
 	.header-info__phone
-		color black
+		color white
 	.header-info__callback
-		color black
+		color white
 	.header-info__text
-		color black
+		color white
 	.header-menu
 		border 1px solid #e5e5e5
 
@@ -260,9 +289,15 @@
 	border-top:1px solid #e6e6e6
 
 .basket
+	+below(768px)
+		padding: 0
+		height: calc(100vh - 54px)
+		overflow-y scroll
 	padding: 60px 0
 
 .basket-wrap-coner
+	+below(768px)
+		right: 19px
 	position: absolute
 	top -8px
 	size 16px
@@ -274,6 +309,11 @@
 
 
 .basket__el
+	+below(768px)
+		fw()
+		flex(mid)
+		fl()
+		position: relative
 	display flex!important
 	flex(between)
 	padding: 15px 20px
@@ -282,9 +322,15 @@
 	outline none!important
 
 .basket-container
+	+below(768px)
+		height: auto
 	height: 185px
 
 .basket__img
+	+below(768px)
+		margin-right: 0
+		height: 100px
+		width: 100px
 	width: 80px
 	height: 60px
 	bg-full()
@@ -292,7 +338,12 @@
 	margin-right: 20px
 
 .basket__ingr
+	/*+below(768px)
+		flex(mid)
+		margin-left:initial
+		margin-bottom: 20px*/
 	f()
+	display: none
 	margin-left: auto
 
 .basket__ingr-el
@@ -303,10 +354,18 @@
 
 //.basket__name
 .basket__name-text
+	+below(768px)
+		font-size: 20px
+		margin-bottom: 20px
+		text-align: center
 	@extend .type--md
 	font-family "PF Beau Sans Pro"
 	font-weight 900
 .basket__name-link
+	+below(768px)
+		margin-bottom: 20px
+		width: 100%
+		text-align: center
 	cp()
 	margin-top: 5px
 	@extend .link--text
@@ -314,11 +373,18 @@
 
 //.basket__inc
 .basket__price
+	+below(768px)
+		margin-top: 20px
+		font-size: 20px
 	@extend .type--md
 	font-family "PF Beau Sans Pro"
 	font-weight 900
 
 .basket__delete
+	+below(768px)
+		position: absolute
+		top 20px
+		right: 20px
 	.icon
 		cp()
 		tr(all)
@@ -329,24 +395,46 @@
 			opacity: 1
 
 .basket__el-info
+	+below(768px)
+		width: 100%
+		flex(mid)
+		fl()
+		fw()
 	f()
 	align-items: center
 	width: 65%
 
 .basket__el-change
+	+below(1024px)
+		width: 45%
+	+below(768px)
+		flex(mid)
+		fl()
+		fw()
+		width: 100%
 	flex(between)
 	width: 30%
 
 .basket-footer
+	+below(768px)
+		flex(mid)
+		fl()
 	f()
 	align-items: center
 	margin-top: 30px
 
 .basket-total-text
+	+below(768px)
+		margin-bottom: 20px
+		margin-right: 0
 	font-size: 15px
 	margin-right: 20px
 
 .basket-total
+	+below(768px)
+		margin-right: 0
+		text-align: center
+		margin-bottom: 20px
 	margin-right: 60px
 
 .basket-total-false
@@ -362,7 +450,9 @@
 	font-size 30px
 	font-weight 900
 
-//.basket-promo
+.basket-promo
+	+below(768px)
+		margin-bottom: 20px
 .promo
 	f()
 
@@ -386,7 +476,11 @@
 		size: 12px
 	&:hover
 		background: light-yellow
+
 .basket-get
+	+below(768px)
+		margin-left: initial
+		margin-bottom: 20px
 	margin-left: auto
 
 .header-cart--open
@@ -398,5 +492,41 @@
 .bounce-show
 	animation:  bounceIn  .3s 1 ease-in-out
 	display: block!important
+
+.header-mobile-togle
+	flex(mid)
+	cp()
+	size 53px
+	border-right:1px solid rgba(255, 255, 255, 0.2)
+	margin-right: 15px
+	+above(769px)
+		display: none
+	.icon
+		size 22px
+		fill white
+
+.header-contact-mobile
+	+above(769px)
+		display: none
+	margin-right: 10px
+	color white
+	text-align: right
+
+.header-contact-mobile__phone
+	+below(640px)
+		font-size: 11px
+	color #ffffff
+	font-family PF Beau Sans Pro
+	font-size 14px
+	font-weight 700
 //.btn--md
 //.btn--yellow
+
+.small-header
+	.header-top-wrap
+		background: #194c79
+	.header-main-wrap
+		background: #246cac
+	.header
+		+below(768px)
+			height: auto

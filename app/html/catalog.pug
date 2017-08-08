@@ -1,7 +1,8 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.small-header
+	+header()
 .content
 	.main-cont
 		.menu-type
@@ -81,8 +82,7 @@ include block_html/_include.pug
 		.product-cont
 			- for (var i=0;i< 6;i++)
 				+product()
-
-
 +footer()
++mobile-menu()
 
 include ./block_html/_script.pug

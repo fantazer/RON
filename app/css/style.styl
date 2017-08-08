@@ -97,13 +97,24 @@ body
 
 
 .cont-item-small
+	+below(768px)
+		fw()
+		margin-top: 30px
+		margin-bottom: 0px
+		.item
+			width: 100%!important
+			margin-bottom: 20px
 	margin-top: 80px
-	flex(between)
+	f()
+	justify-content: space-between
+	align-items: stretch
 	margin-bottom: 20px
 	.item
 		width: 32%
 
 .item
+	+below(768px)
+		padding: 15px
 	padding: 25px
 	padding-bottom: 60px
 	border-radius 10px
@@ -114,9 +125,12 @@ body
 		border 2px solid #e6e6e6
 		.item__img-el
 			tr(all)
-			width: 90%
+			transform scale(0.8)
 
 .item__img
+	+below(768px)
+		height: 80px
+		margin-bottom: 20px
 	height: 150px
 	margin-bottom: 40px
 	flex(mid)
@@ -129,6 +143,7 @@ body
 	width: 100%
 	height: 100%
 	bg-full()
+	background-size:contain
 
 .item__title
 	@extend .type--lg
@@ -149,17 +164,26 @@ body
 	background-color #ffffff
 
 .offer
+	+below(768px)
+		flex(between)
+		fl()
 	f()
+	fw()
 	@extend .box
 	padding: 20px
 	margin-bottom: 20px
 	justify-content: space-between
 
 .offer-img
+	+below(768px)
+		width: 70%
+		margin-bottom: 20px
 	flex(mid)
 	width: 45%
 
 .offer-info
+	+below(768px)
+		width: 100%
 	flex(mid)
 	flex-flow: column
 	width: 55%
@@ -172,18 +196,28 @@ body
 	font-family "PF Beau Sans Pro"
 
 .offer-text
+	+below(768px)
+		width: 90%
 	width: 70%
 	opacity 0.8
 	text-align: center
 
 .main-kind
+	+below(768px)
+		fw()
+		margin-bottom: 30px
 	flex(between)
 	margin-bottom: 50px
-	.kind-el
-		width: 24%
 
 .kind-el
+	+below(768px)
+		width: calc(50% + 2px)
+		br(0)
+		margin-left: -2px
+		margin-top: -2px
+		padding: 20px
 	@extend .box
+	width: 24%
 	tr(all)
 	padding: 40px 20px
 	&:hover
@@ -193,6 +227,8 @@ body
 			width: 90%
 
 .kind-img
+	+below(768px)
+		height: 60px
 	flex(mid)
 	width: 100%
 	height: 130px
@@ -207,6 +243,8 @@ body
 
 
 .kind-title
+	+below(768px)
+		font-size: 12px
 	@extend .type--lg
 	up()
 	text-align: center
@@ -217,6 +255,9 @@ body
 	background-color #f9f9f9
 
 .block-sale
+	+below(768px)
+		fw()
+		padding: 20px  0
 	flex(between)
 	padding: 35px 0
 	.owl-dots
@@ -236,6 +277,9 @@ body
 		opacity 1
 
 .block-sale__slider
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	width: 35%
 
 .block-sale__el
@@ -245,19 +289,28 @@ body
 	background: white
 
 .block-sale__info
+	+below(768px)
+		width: 100%
 	width: 50%
 
 .block-sale__title
+	+below(768px)
+		text-align: center
 	@extend .type--xl
 	up()
 	font-family "PF Beau Sans Pro"
 	margin-bottom: 30px
 
 .block-sale__text
+	+below(768px)
+		text-align: center
+		width: 100%
 	line-height: 1.8
 	width: 90%
 
 .menu-type
+	+below(768px)
+		display: none
 	flex(around)
 	padding: 30px 0
 	border-bottom:1px solid #f0f0f0
@@ -274,12 +327,16 @@ body
 	color black
 
 .filter-title
+	+below(768px)
+		padding: 10px 0
 	flex(between)
 	padding: 35px 0
 	border-bottom:1px solid #f0f0f0
 
 .filter-title__arrow
 	.icon
+		+below(768px)
+			size 35px
 		size 50px
 		fill black
 		tr(all)
@@ -293,6 +350,8 @@ body
 
 .filter-title__setting
 	.icon
+		+below(768px)
+			size 35px
 		tr(all)
 		cp()
 		size 50px
@@ -305,9 +364,12 @@ body
 	display: none
 
 .filter-check
-	flex(between)
+	f()
+	justify-content: space-between
 	fw()
 	border-bottom:1px solid #e2e2e2
+	.sytle-input-text
+		width: 70%
 
 .filter-name
 	@extend .type--lg
@@ -316,6 +378,12 @@ body
 	padding: 20px 0
 
 .filter-check__el
+	+below(1024px)
+		width: 32%
+		font-size: 11px
+	+below(640px)
+		width: 48%
+		font-size: 10px
 	margin-bottom: 20px
 	width: 24%
 
@@ -324,6 +392,11 @@ body
 	fw()
 
 .filter-ingr__el
+	+below(768px)
+		padding: 10px!important
+		font-size: 11px
+		flex-grow 1
+		text-align: center
 	cp()
 	tr(background)
 	margin-right: 10px
@@ -333,25 +406,35 @@ body
 	background-color rgba(255, 255, 255, 0)
 	margin-bottom: 15px
 	&:hover
-		background: yellow
-		padding: 11px 31px
-		border 0
+		+above(769px)
+			background: yellow
+			border 1px solid yellow
 
 .filter-ingr__el--active
 	background: yellow
 	padding: 11px 31px
 	border 0
+	+below(768px)
+		padding: 11px!important
 
 .filter-footer
+	+below(768px)
+		padding-top: 20px
+		fw()
+		flex(mid)
+		fl()
 	f()
 	align-items: center
 	justify-content: flex-end
 	padding-top: 60px
 
 .filter-footer__reset
+	+below(768px)
+		width: 100%
+		text-align: center
+		margin-right: 0
+		margin-bottom: 20px
 	margin-right: 20px
-
-.filter-footer__reset
 	cp()
 
 .filter-title__setting--active
@@ -557,6 +640,9 @@ body
 	br(10px)
 
 .title-row
+	+below(768px)
+		padding: 15px 0
+		margin-bottom: 30px
 	@extend .type--xl
 	text-align: center
 	padding: 45px 0
@@ -565,6 +651,9 @@ body
 	border-bottom:1px solid #dedede
 	margin-bottom: 50px
 	.icon
+		+below(768px)
+			size 25px
+			margin-top: 3 px
 		tr(all)
 		size 50px
 		opacity .2
@@ -743,22 +832,48 @@ body
 	margin-bottom: 70px
 
 .order
+	+below(968px)
+		fw()
 	f()
 	justify-content:space-between
 	align-items flex-start
 
 .order-cont
+	+below(968px)
+		width: 100%
+		order 2
 	width: 68%
+	order 1
+
+.order-info-wrap
+	+below(968px)
+		width: 100%
+		order 1
+		flex(mid)
+		margin-bottom: 20px
+	width: 30%
+	order 2
 
 .order-info
-	width: 30%
-
+	+below(968px)
+		width: 60%
+	+below(768px)
+		width: 100%
+	border 1px solid #d3d3d3
+	br(10px)
+	background: white
+	z-index 10!important
 .order-item
+	+below(768px)
+		margin-bottom: 20px
 	margin-bottom: 70px
 	.basket__el-info
+		+below(768px)
+			width: 100%
 		width: 55%
 	.basket__el-change
 		width: 45%
+
 
 .basket__el
 	width: 100%!important
@@ -769,9 +884,16 @@ body
 		max-height auto!imprtant
 
 .random-souse
+	+below(768px)
+		display: block
+		text-align: center
+	cp()
 	@extend .link--blue
 
 .order-text-souse
+	+below(768px)
+		margin-bottom: 20px
+		text-align: center
 	margin-bottom: 70px
 	line-height: 1.6
 
@@ -779,19 +901,20 @@ body
 	f()
 	fw()
 	.product-el
+		+below(768px)
+			margin: 0
+			width: 100%
 		item(2,20px)
 
-.order-info
-	background: red
-	br(10px)
+
 //.order-info-cont
 .order-info-head
 	padding: 45px 40px
-	color white
+	color black
 	flex(mid)
 	fl()
 	fw()
-	border-bottom 2px dashed #ff6e76
+	border-bottom 2px dashed #d3d3d3
 .order-total-text
 	text-align: center
 	margin-bottom: 15px
@@ -804,9 +927,10 @@ body
 	margin-bottom: 30px
 
 .order-total-get
+
 	@extend .btn--lg
 	@extend .btn--yellow
-	padding: 20px 75px;
+	padding: 20px
 	width: 100%
 
 .order-info-footer
@@ -816,16 +940,16 @@ body
 	fw()
 	.promo
 		margin-bottom: 30px
-		placeholder(rgba(255, 249, 255, 0.7))
+
 	.promo-input
 		background: none
 		color white
 .order-how
 	tr(all)
+	@extend .link--blue
 	text-align: center
 	display: block
 	text-decoration: underline
-	color white
 	opacity 0.7
 	&:hover
 		opacity 1
@@ -868,7 +992,18 @@ body
 .modal-open
 	overflow: hidden
 	overflow-x: hidden
-	overflow-y: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-fix
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
 	position: fixed
 	top: 0
 	left: 0
@@ -882,5 +1017,57 @@ body
 .title-row-back
 	cp()
 
+//mobile slide menu
+#mobile-menu
+	+above(768px)
+		display none!important
+	margin-top 54px
+	background white
+	border-top 1px solid #e6e6e6
+	//display none!important
+#mobile-menu:not( .mm-menu )
+	display: none;
+.mobile-menu-el
+	padding 10px 0!important
+	display inline-block
+	color black
+	font-size 16px
+	font-weight 600
+	.header__sub-menu__el
+		width 100%
+		f()
+.mm-listview>li:not(.mm-divider):after
+	left 0
+.mm-menu .mm-listview>li .mm-next:after,
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
+	border-color black
+.mm-title
+	color black!important
+.mm-navbar
+	background #efeeee
+html.mm-opened
+	overflow hidden
+
+.mobile-menu-el--sub
+	a:after, a:before
+		border-color  #a5a4a4!important
+	span,a
+		color #a5a4a4!important
+
+.header-mobile-togle
+	.icon-close
+		display none
+.header-mobile-togle--open
+	.icon-close
+		display block
+	.icon-open
+		display none
+
+.header__sub-arrow-wrap
+	flex(mid)
+
+.title-mobile
+	+below(768px)
+		text-align: center
 
 @import "../module/**/*"
