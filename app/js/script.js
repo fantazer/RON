@@ -45,12 +45,12 @@ $(document).ready(function(){
 
 			if(numberActive == 2){
 				var foundationImg = 'url(img/' + foundation + '.png)'; //Location for image
-				$('.part-editor-img__right').css({'background':foundationImg});
+				$('.part-editor-img__right').css({'backgroundImage':foundationImg});
 				$(this).addClass('pillow-right');
 			}
 
 			if(numberActive == 1 && $('.foundation__el').hasClass('pillow-right')){
-				$('.part-editor-img__left').css({'background':foundationImg});
+				$('.part-editor-img__left').css({'backgroundImage':foundationImg});
 				$(this).addClass('pillow-left');
 			}
 
