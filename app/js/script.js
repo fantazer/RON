@@ -1,17 +1,88 @@
 $(document).ready(function(){
 
-	//stick block
-		$(".order-info").sticky({topSpacing:140});
-	//stick block end
+
+	//foundation construction
+		$('.foundation__el').click(function () {
+			$('.part-editor-img__left').click(function () {
+				$(this).css({'backgroundImage':'none'});
+				$('.foundation__el').each(function(){
+					if($(this).hasClass('pillow-left')){
+						$(this).removeClass('pillow-left');
+						$(this).removeClass('foundation__el--active');
+					}
+				})
+			})
+
+			$('.part-editor-img__right').click(function () {
+				$(this).css({'backgroundImage':'none'});
+				$('.foundation__el').each(function(){
+					if($(this).hasClass('pillow-right')){
+						$(this).removeClass('pillow-right');
+						$(this).removeClass('foundation__el--active');
+					}
+				})
+			})
+
+			if(!$(this).hasClass('foundation__el--default')){
+				$(this).toggleClass('foundation__el--active');
+			}
+
+			var numberActive = $('.foundation__el--active').length;
+			var foundation = $(this).data('foundation');
+
+			if(numberActive == 0){
+				$('.part-editor-img__right').css({'backgroundImage':'none'});
+				$('.part-editor-img__left').css({'backgroundImage':'none'});
+			}
+
+
+			if(numberActive == 1 && $('.foundation__el').not('.pillow-right') ){
+				var foundationImg = 'url(img/' + foundation + '.png)'; //Location for image
+				$('.part-editor-img__left').css({'backgroundImage':foundationImg});
+				$('.part-editor-img__right').css({'backgroundImage':'none'});
+				$(this).addClass('pillow-left');
+			}
+
+			if(numberActive == 2){
+				var foundationImg = 'url(img/' + foundation + '.png)'; //Location for image
+				$('.part-editor-img__right').css({'background':foundationImg});
+				$(this).addClass('pillow-right');
+			}
+
+			if(numberActive == 1 && $('.foundation__el').hasClass('pillow-right')){
+				$('.part-editor-img__left').css({'background':foundationImg});
+				$(this).addClass('pillow-left');
+			}
+
+
+		});
+	//foundation construction end
+
+	//remove components
+		$('.card .card-tag__el-add').click(function(){
+			$(this).remove();
+		})
+	//remove components end
+
+
 
 	//detect mobile
 	var isMobile = function(){
-		if($(window).width() > 768 ){
-				$('.basket-container').slick('reinit');
-			}
-			if($(window).width() < 768 ){
-				$(".order-info").unstick();
-			}
+		if($(window).width() > 1025 ){
+			$(".part-img__wrap").add(".order-info").stick_in_parent({
+				'offset_top':100
+			});
+		}
+		if($(window).width() < 1025 ){
+			$(".part-img__wrap").trigger("sticky_kit:detach");
+		}
+
+		if($(window).width() > 769){
+		// 	 $('.basket-container').not('.slick-initialized').slick('reinit');
+		}
+		if($(window).width() < 769 ){
+			$(".order-info").trigger("sticky_kit:detach");
+		}
 	};
 	$(window).resize(function(){
 		isMobile();
@@ -285,13 +356,7 @@ $(document).ready(function(){
 		});
 	//card thin or fat-end
 
-	//foundation toggle
-		$('.foundation__el').click(function () {
-			if(!$(this).hasClass('foundation__el--default')){
-				$(this).toggleClass('foundation__el--active');
-			}
-		});
-	//foundation toggle-end
+
 
 	//choose part for ingr
 	$('.part-ingr-el').click(function () {
@@ -347,9 +412,25 @@ $(document).ready(function(){
 		});
 	};
 	initSlider();
-	//cart vertical slider edn
+	//cart vertical slider end
 
+	//editor vertical slider
+	var initSliderEditor = function(){
+		$('.part-editor__slider').not('.slick-initialized').slick({
+		  slidesToShow: 4,
+		  autoplay: false,
+		  speed: 500,
+		  vertical:true,
+		  arrows: true,
+		  prevArrow:'<svg class="slider-control"><use xlink:href="#arrow-up"></use></svg>',
+			nextArrow:'<svg class="slider-control"><use xlink:href="#arrow-down"></use></svg>',
+		  verticalSwiping:true,
+		  infinite:false,
 
+		});
+	};
+	initSliderEditor();
+	//editor vertical slider end
 
 	//init modal
 	var closeModal = function () {

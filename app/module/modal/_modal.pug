@@ -65,6 +65,26 @@ mixin modal()
 							.modal-town__el.toggle-close-modal Тольяти
 				//modal-town-end
 
+				//modal-component
+				.modal.modal--white(data-modal="component")
+					.modal-close
+						+icon("close","icon")
+					.modal-content.modal-content--component
+						.modal-component
+							- for (var i=0;i<4;i++)
+								-
+									var items = [
+										'орегано',
+										'сыр Фета',
+										'сыр моцарелла',
+										'ветчина',
+										'Пицца соус',
+										'орегано'
+										];
+								each item in items
+									.modal-component__el #{item}
+				//modal-component-end
+
 
 				//modal-pass
 				.modal(data-modal="pass")

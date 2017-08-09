@@ -1334,6 +1334,171 @@
 				</div>
 			</div>
 		</div>
+		<!--block modal-->
+		<div class="modal-layer">
+			<div class="modal-cont">
+				<div class="modal-filter"></div>
+				<div class="modal-wrap">
+					<!--modal-registration-->
+					<div class="modal" data-modal="registration">
+						<div class="modal-header">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Регистрация</div>
+						</div>
+						<div class="modal-content">
+							<form action="#">
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="text" data-input="Ваше имя" />
+									</div>
+								</div>
+								<div class="input-cont input-cont--half">
+									<div class="input-row">
+										<input class="input-animate" type="text" data-input="Телефон" />
+									</div>
+									<div class="input-row">
+										<input class="input-animate" type="text" data-input="Email" />
+									</div>
+								</div>
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="password" data-input="Пароль" />
+									</div>
+								</div>
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="password" data-input="Повторите пароль" />
+									</div>
+								</div>
+								<div class="modal-get">
+									<input class="btn--lg btn--yellow" type="submit" value="Зарегистрировать" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--modal-registration-end-->
+					<!--modal-enter-->
+					<div class="modal" data-modal="enter">
+						<div class="modal-header">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Авторизация</div>
+						</div>
+						<div class="modal-content">
+							<form action="#">
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="text" data-input="Телефон" />
+									</div>
+								</div>
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="password" data-input="Пароль" />
+									</div>
+								</div>
+								<div class="modal-foget">
+									<div class="link--blue show-modal" data-modal="pass">Забыли пароль ?</div>
+								</div>
+								<div class="modal-get">
+									<input class="btn--lg btn--yellow" type="submit" value="Войти" />
+								</div>
+								<div class="modal-account">
+									<div class="link--text modal-get" data-modal="registration">Нет аккаунта? зарегистрироваться</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--modal-enter-end-->
+					<!--modal-town-->
+					<div class="modal" data-modal="town">
+						<div class="modal-header">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Выберите город</div>
+						</div>
+						<div class="modal-content modal-content--town">
+							<div class="modal-town">
+								<div class="modal-town__el toggle-close-modal">Москва</div>
+								<div class="modal-town__el toggle-close-modal">Тольяти</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-town-end-->
+					<!--modal-component-->
+					<div class="modal modal--white" data-modal="component">
+						<div class="modal-close">
+							<svg class="icon">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
+						<div class="modal-content modal-content--component">
+							<div class="modal-component">
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">сыр Фета</div>
+								<div class="modal-component__el">сыр моцарелла</div>
+								<div class="modal-component__el">ветчина</div>
+								<div class="modal-component__el">Пицца соус</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">сыр Фета</div>
+								<div class="modal-component__el">сыр моцарелла</div>
+								<div class="modal-component__el">ветчина</div>
+								<div class="modal-component__el">Пицца соус</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">сыр Фета</div>
+								<div class="modal-component__el">сыр моцарелла</div>
+								<div class="modal-component__el">ветчина</div>
+								<div class="modal-component__el">Пицца соус</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">орегано</div>
+								<div class="modal-component__el">сыр Фета</div>
+								<div class="modal-component__el">сыр моцарелла</div>
+								<div class="modal-component__el">ветчина</div>
+								<div class="modal-component__el">Пицца соус</div>
+								<div class="modal-component__el">орегано</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-component-end-->
+					<!--modal-pass-->
+					<div class="modal" data-modal="pass">
+						<div class="modal-header">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Восстановление пароля</div>
+						</div>
+						<div class="modal-content">
+							<form action="#">
+								<div class="input-cont">
+									<div class="input-row">
+										<input class="input-animate" type="text" data-input="Телефон" />
+									</div>
+								</div>
+								<div class="modal-get">
+									<input class="btn--lg btn--yellow" type="submit" value="Восстановить" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--modal-pass-end-->
+				</div>
+			</div>
+		</div>
+		<!--block modal end-->
 		<!--block mobile-menu-->
 		<nav id="mobile-menu">
 			<ul class="mobile-menu__one-lvl">

@@ -21,6 +21,8 @@
     "svg4everybody": "2.1.3"
   },
   "devDependencies": {
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "jquery-sticky": "^1.0.4",
+    "sticky-kit": "^1.1.2"
   }
 }

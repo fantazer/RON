@@ -70,22 +70,46 @@ include block_html/_include.pug
 				.foundation
 					- for (var i=0;i<5;i++)
 						+foundation()
-					+foundation(type='foundation__el--active')
 					+foundation(type='foundation__el--default')
 				.part-ingr-title Добавить ингредиенты
 				.part-ingr-cont
 					.part-ingr-el На левую
 					.part-ingr-el На всю
 					.part-ingr-el На правую
+
 			.part-img
-				.part-img__el(style="background-image:url('img/pizza-part.png')")
-				.ing-row
-					- for (var i=0;i<6;i++)
-						.ing-el
-				.part-img__total итого:
-					span 476г./400 р.
-				a(href="#").part-img__get в корзину
-				.part-img__reset Сбросить
+				.part-img__wrap
+					.part-img__name Тонкое тесто - 36 см - красный соус
+					.part-editor
+						.part-editor__left
+							.ing-row.part-editor__slider
+								- for (var i=0;i<6;i++)
+									.ing-el__wrap
+										.ing-el
+						.part-editor-img
+							.part-editor-img__left
+								.part-editor__filter
+								.part-editor__del
+									+icon("close","icon")
+							.part-editor-img__empty(style="background-image:url('img/pillow.png')")
+							.part-editor-img__right
+								.part-editor__filter
+								.part-editor__del
+									+icon("close","icon")
+						.part-editor__right
+							.ing-row.part-editor__slider
+								- for (var i=0;i<6;i++)
+									.ing-el__wrap
+										.ing-el
+					//.ing-row
+					//	- for (var i=0;i<6;i++)
+					//		.ing-el
+					.part-img__total итого:
+						span 476г./400 р.
+					a(href="#").part-img__get в корзину
+					.part-img__reset Сбросить
 +footer()
++mobile-menu()
++modal()
 
 include ./block_html/_script.pug
