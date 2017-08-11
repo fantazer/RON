@@ -220,6 +220,8 @@ button
 // ============================ Inputs ============================
 
 input,textarea,select
+	+below(768px)
+		padding: 15px 10px
 	border 0px
 	padding 20px
 	border 0
@@ -277,12 +279,12 @@ input,textarea,select
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 22px
-		height 22px
+		width 20px
+		height 20px
 		position relative
 		display inline-block
 		margin-right 10px
-		background white
+		background #f5f5f6
 		border 1px solid #cfcfcf
 		round()
 		cp()
@@ -292,8 +294,10 @@ input,textarea,select
 		&:checked + .sytle-input-element
 			flex(mid)
 			color white
+			background: white
+			border 1px solid yellow
 			.icon-radio
 				round()
-				size 14px
-				background blue;
+				size 12px
+				background yellow;
 

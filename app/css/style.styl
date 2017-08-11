@@ -369,7 +369,7 @@ body
 	fw()
 	border-bottom:1px solid #e2e2e2
 	.sytle-input-text
-		width: 70%
+		width: 90%
 
 .filter-name
 	@extend .type--lg
@@ -414,6 +414,8 @@ body
 	background: yellow
 	padding: 11px 31px
 	border 0
+	&:hover
+		border 0
 	+below(768px)
 		padding: 11px!important
 
@@ -697,6 +699,7 @@ body
 	+below(768px)
 		padding: 15px 0
 		margin-bottom: 30px
+		font-size: 16px
 	@extend .type--xl
 	text-align: center
 	padding: 45px 0
@@ -707,7 +710,7 @@ body
 	.icon
 		+below(768px)
 			size 25px
-			margin-top: 3 px
+			margin-top: -2px
 		tr(all)
 		size 50px
 		opacity .2
@@ -876,6 +879,7 @@ body
 	border 1px solid #ececec
 	background: white
 	z-index 5!important
+	position: relative
 
 .part-img__el
 	width: 100%
@@ -1063,10 +1067,14 @@ body
 	position: relative
 
 .input-placeholder-val
+	+below(768px)
+		font-size: 10px
+		top: 15px
+		left 10px
 	tr(all)
 	position: absolute
 	left 20px
-	top 18px
+	top 20px
 	opacity 0.5
 
 .input-animate
@@ -1221,6 +1229,9 @@ html.mm-opened
 	left 0
 
 .part-editor-img__right
+	&:hover
+		.part-editor__remove--right
+			display: block
 	position: absolute
 	width: 50%
 	height: 100%
@@ -1269,5 +1280,158 @@ html.mm-opened
 		right: 0
 		transform translate(-12px,100%) rotate(90deg)
 		background: none
+
+
+.part-editor__remove
+	position: absolute
+	/*background: rgba(0, 0, 0, 0.69)
+	size 25px
+	round()*/
+	flex(mid)
+	//display: none
+	.icon
+		size 30px
+		fill white
+
+.part-editor__remove--right
+	top 50%
+	left 25%
+	transform translate(50%,-50%)
+.part-editor__remove--left
+	right 25%
+	top 50%
+	transform translate(-50%,-50%)
+
+.product-add
+	+below(1200px)
+		font-size: 14px
+
+.order-form
+	center(580px,10px)
+	textarea
+		width: 100%
+		margin-bottom: 40px
+
+.radio-cont
+	+below(768px)
+		fw()
+		padding: 10px
+		.check-el
+			width: 100%
+			margin-bottom: 10px
+	flex(between)
+	padding: 40px 0
+	border-bottom:1px solid #dedede
+	margin-bottom: 20px
+
+
+.order-form__tab
+	f()
+.order-form__tab-el
+	+below(768px)
+		font-size: 16px
+	color #6b6b6b
+	font-family Roboto
+	font-size 20px
+	text-align center
+	padding: 20px
+	width: 50%
+	cp()
+
+.order-form__border
+	position: relative
+	height 5px
+	border-radius 2px
+	background-color #e1e1e1
+	width: 100%
+	overflow hidden
+	margin-bottom: 40px
+
+.order-form__border-el
+	position: absolute
+	border-radius 2px
+	height: 100%
+	width: 50%
+	background: yellow
+	tr(all)
+	left 0px
+	top 0px
+	right initial
+
+.order-form__border-el--right
+	left 50%
+
+.order-form__tab-container
+	display: none
+
+
+.order-form__tab-container-active
+	display: block
+
+.order-form__tab-el--active
+	color black
+
+.order-form__town
+	+below(768px)
+		font-size: 16px
+	font-size: 20px
+	font-weight: 500
+	margin-bottom: 40px
+	span
+		display: inline-block
+		padding: 0
+		border-bottom 1px dotted #302c2b
+		cp()
+
+.order-form-divider
+	height: 1px
+	width: 100%
+	background: #dedede
+	margin: 40px 0
+
+.order-form-promo
+	margin: 40px 0
+
+.order-form-inc
+	f()
+	align-items:center
+	margin-bottom: 40px
+	.elements-icr-block
+		width: auto
+
+.order-form-inc__text
+	margin-right: 20px
+
+
+.order-form-get
+	flex(mid)
+	margin-bottom: 40px
+
+.nice-select
+	br(3px)
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	width: 100%
+	.list
+		width: calc(100% )
+		left 0px
+		br(3px)
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+
+select.select-beauty
+	display: none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+.order-form__market
+	height: 45px
 
 @import "../module/**/*"

@@ -14,6 +14,7 @@
 		"card":"card",
 		"part":"part",
 		"order":"order",
-		"order-form":"order-form"
+		"order-form":"order-form",
+		"form":"form"
 	}
 }
