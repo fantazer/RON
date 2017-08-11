@@ -1,0 +1,86 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.small-header
+	+header()
+.content
+	.main-cont
+		.title-row
+			.title-row-back
+				+icon("round-arrow-left","icon")
+			span Оформление заказа
+		.order-form
+			.input-cont
+				.input-row
+					input(type="text"  data-input="Ваше имя").input-animate
+			.input-cont.input-cont--half
+				.input-row
+					input(type="text"  data-input="Телефон").input-animate
+				.input-row
+					input(type="text"  data-input="Email").input-animate
+			.radio-cont
+				+radio('Наличные курьеру')
+				+radio('Картой курьеру')
+				+radio('Онлайн')
+			//tab controll
+			.order-form__tab
+				.order-form__tab-el.order-form__tab-el--active(data-tab="deliver") Доставка
+				.order-form__tab-el(data-tab="self") Самовывоз
+			.order-form__border
+				.order-form__border-el
+
+
+			//tab container
+			.order-form__tab-container.order-form__tab-container-active(data-tab="deliver")
+				.order-form__town Ваш город:
+					span.modal-get(data-modal="town") Москва
+				.input-cont
+					.input-row
+						input(type="text"  data-input="Улица").input-animate
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" data-input="Дом").input-animate
+					.input-row
+						input(type="text" data-input="Квартира").input-animate
+					.input-row
+						input(type="text" data-input="Этаж").input-animate
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" data-input="Корпус").input-animate
+					.input-row
+						input(type="text" data-input="Подьезд").input-animate
+					.input-row
+						input(type="text" data-input="Домофон").input-animate
+			//tab container
+			.order-form__tab-container(data-tab="self")
+				.order-form__town Ваш город:
+					span.modal-get(data-modal="town") Москва
+				.order-form__market
+					select.select-beauty
+						option(data-display="Выберите ресторан") Новый ресторан
+						option Первый ресторан
+						option Второй ресторан
+						option Третий ресторан
+
+			.order-form-divider
+			.input-cont
+				.input-row
+					input(type="text"  data-input="Время доставки: как можно раньше").input-animate
+			.order-form-promo
+				.promo
+					input(type="text" placeholder="Промокод").promo-input
+					.promo-get
+						+icon("arrow-custom","icon")
+			.order-form-inc
+				.order-form-inc__text Количество персон
+				.incr--one
+					+incr('1')
+			textarea(name="", cols="30", rows="10" placeholder="Комментарий")
+			.order-form-get
+				.btn--lg.btn--yellow  Оформить
+
++footer()
++mobile-menu()
++modal()
+
+include ./block_html/_script.pug

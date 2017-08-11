@@ -23,6 +23,7 @@
   "devDependencies": {
     "slick-carousel": "^1.6.0",
     "jquery-sticky": "^1.0.4",
-    "sticky-kit": "^1.1.2"
+    "sticky-kit": "^1.1.2",
+    "jquery-nice-select": "^1.1.0"
   }
 }

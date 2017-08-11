@@ -446,10 +446,10 @@ $(document).ready(function(){
 
 
 	//choose part for ingr
-	$('.part-ingr-el').click(function () {
+	/*$('.part-ingr-el').click(function () {
 			$('.part-ingr-el').removeClass('part-ingr-el--active');
 			$(this).addClass('part-ingr-el--active');
-		});
+		});*/
 	//choose part for ingr end
 
 	//part choose fat or thin

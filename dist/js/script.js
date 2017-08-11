@@ -1,9 +1,69 @@
 $(document).ready(function(){
 
+	//select edit view
+	$('.select-beauty').niceSelect();
+	//select edit view end
+
+	//tab delivery
+	$('.order-form__tab-el').click(function(){
+		var currentTab = $(this).data('tab');
+		if(currentTab=='self'){
+			$('.order-form__border-el').addClass('order-form__border-el--right')
+		} else {
+			$('.order-form__border-el').removeClass('order-form__border-el--right')
+		}
+		$('.order-form__tab-el').removeClass('order-form__tab-el--active');
+		$(this).addClass('order-form__tab-el--active');
+
+		$('.order-form__tab-container').each(function(){
+			if($(this).data('tab')==currentTab){
+				$(this).addClass('order-form__tab-container-active')
+			}else{
+				$(this).removeClass('order-form__tab-container-active')
+			}
+		})
+	});
+
+	//tab delivery end
+
+	//cart vertical slider
+	var initSlider = function(){
+		$('.basket-container').not('.slick-initialized').slick({
+		  slidesToShow: 2,
+		  autoplay: false,
+		  speed: 500,
+		  vertical:true,
+		  arrows: true,
+		  prevArrow: $('.header__sub-arrow-up'),
+		  nextArrow: $('.header__sub-arrow-down'),
+		  verticalSwiping:true,
+		  infinite:false,
+		  responsive: [
+                {
+                    breakpoint: 768,
+                    settings: "unslick"
+                }
+            ]
+		});
+	};
+	initSlider();
+	//cart vertical slider end
 
 	//foundation construction
-		$('.foundation__el').click(function () {
-			$('.part-editor-img__left').click(function () {
+			var partClear = function(){
+				$('.foundation__el').each(function(){
+					if($(this).hasClass('pillow-left')){
+						$(this).removeClass('pillow-left');
+						$(this).removeClass('foundation__el--active');
+					}
+					if($(this).hasClass('pillow-right')){
+						$(this).removeClass('pillow-right');
+						$(this).removeClass('foundation__el--active');
+					}
+				})
+			}
+
+		$('.part-editor-img__left').click(function () {
 				$(this).css({'backgroundImage':'none'});
 				$('.foundation__el').each(function(){
 					if($(this).hasClass('pillow-left')){
@@ -13,46 +73,68 @@ $(document).ready(function(){
 				})
 			})
 
-			$('.part-editor-img__right').click(function () {
-				$(this).css({'backgroundImage':'none'});
-				$('.foundation__el').each(function(){
-					if($(this).hasClass('pillow-right')){
-						$(this).removeClass('pillow-right');
-						$(this).removeClass('foundation__el--active');
-					}
-				})
+		$('.part-editor-img__right').click(function () {
+			$(this).css({'backgroundImage':'none'});
+			$('.foundation__el').each(function(){
+				if($(this).hasClass('pillow-right')){
+					$(this).removeClass('pillow-right');
+					$(this).removeClass('foundation__el--active');
+				}
 			})
+		})
+
+		$('.foundation__el').click(function () {
 
 			if(!$(this).hasClass('foundation__el--default')){
 				$(this).toggleClass('foundation__el--active');
 			}
 
 			var numberActive = $('.foundation__el--active').length;
+			console.log(numberActive);
 			var foundation = $(this).data('foundation');
 
 			if(numberActive == 0){
 				$('.part-editor-img__right').css({'backgroundImage':'none'});
 				$('.part-editor-img__left').css({'backgroundImage':'none'});
+				partClear();
 			}
 
 
-			if(numberActive == 1 && $('.foundation__el').not('.pillow-right') ){
-				var foundationImg = 'url(img/' + foundation + '.png)'; //Location for image
-				$('.part-editor-img__left').css({'backgroundImage':foundationImg});
-				$('.part-editor-img__right').css({'backgroundImage':'none'});
-				$(this).addClass('pillow-left');
+			if(numberActive == 1 ){
+				var foundationImg = 'url(img/' + foundation + ')'; //Location for image
+				if($(this).hasClass('pillow-left')){
+					$('.part-editor-img__left').css({'backgroundImage':'none'});
+					$(this).removeClass('pillow-left')
+					console.log('hasClass');
+				} else {
+					$('.part-editor-img__left').css({'backgroundImage':foundationImg});
+					$('.part-editor-img__right').css({'backgroundImage':'none'});
+					$(this).addClass('pillow-left');
+				}
 			}
 
 			if(numberActive == 2){
-				var foundationImg = 'url(img/' + foundation + '.png)'; //Location for image
-				$('.part-editor-img__right').css({'background':foundationImg});
+				var foundationImg = 'url(img/' + foundation + ')'; //Location for image
+				$('.part-editor-img__right').css({'backgroundImage':foundationImg});
 				$(this).addClass('pillow-right');
 			}
 
-			if(numberActive == 1 && $('.foundation__el').hasClass('pillow-right')){
-				$('.part-editor-img__left').css({'background':foundationImg});
+			if(numberActive == 3){
+				var foundationImg = 'url(img/' + foundation + ')'; //Location for image
+				$('.foundation__el').each(function(){
+					if($(this).hasClass('pillow-left')){
+						$(this).removeClass('pillow-left');
+						$(this).removeClass('foundation__el--active');
+					}
+				})
+				$('.part-editor-img__left').css({'backgroundImage':foundationImg});
 				$(this).addClass('pillow-left');
+				console.log('tree item');
 			}
+			/*if(numberActive == 1 && $('.foundation__el').hasClass('pillow-right')){
+				$('.part-editor-img__left').css({'backgroundImage':foundationImg});
+				$(this).addClass('pillow-left');
+			}*/
 
 
 		});
@@ -63,8 +145,6 @@ $(document).ready(function(){
 			$(this).remove();
 		})
 	//remove components end
-
-
 
 	//detect mobile
 	var isMobile = function(){
@@ -78,7 +158,7 @@ $(document).ready(function(){
 		}
 
 		if($(window).width() > 769){
-		// 	 $('.basket-container').not('.slick-initialized').slick('reinit');
+			$('.basket-container').not('.slick-initialized').slick('reinit');
 		}
 		if($(window).width() < 769 ){
 			$(".order-info").trigger("sticky_kit:detach");
@@ -166,6 +246,13 @@ $(document).ready(function(){
         var $input = $(this).parent().find('.incr__val span');
         var count = parseInt($input.html()) - 1;
         count = count < 1 ? 0 : count;
+        $input.html(count);
+    });
+
+	$('.incr--one .incr__minus').click(function () {
+        var $input = $(this).parent().find('.incr__val span');
+        var count = parseInt($input.html()) - 1;
+        count = count < 1 ? 1 : count;
         $input.html(count);
     });
 
@@ -359,10 +446,10 @@ $(document).ready(function(){
 
 
 	//choose part for ingr
-	$('.part-ingr-el').click(function () {
+	/*$('.part-ingr-el').click(function () {
 			$('.part-ingr-el').removeClass('part-ingr-el--active');
 			$(this).addClass('part-ingr-el--active');
-		});
+		});*/
 	//choose part for ingr end
 
 	//part choose fat or thin
@@ -391,28 +478,7 @@ $(document).ready(function(){
 	//part choose souse end
 
 
-	//cart vertical slider
-	var initSlider = function(){
-		$('.basket-container').not('.slick-initialized').slick({
-		  slidesToShow: 2,
-		  autoplay: false,
-		  speed: 500,
-		  vertical:true,
-		  arrows: true,
-		  prevArrow: $('.header__sub-arrow-up'),
-		  nextArrow: $('.header__sub-arrow-down'),
-		  verticalSwiping:true,
-		  infinite:false,
-		  responsive: [
-                {
-                    breakpoint: 768,
-                    settings: "unslick"
-                }
-            ]
-		});
-	};
-	initSlider();
-	//cart vertical slider end
+
 
 	//editor vertical slider
 	var initSliderEditor = function(){

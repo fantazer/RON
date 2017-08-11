@@ -66,10 +66,10 @@ mixin modal()
 				//modal-town-end
 
 				//modal-component
-				.modal.modal--white(data-modal="component")
+				.modal.modal--white.modal--component(data-modal="component")
 					.modal-close
 						+icon("close","icon")
-					.modal-content.modal-content--component
+					.modal-content--component
 						.modal-component
 							- for (var i=0;i<4;i++)
 								-
@@ -100,4 +100,29 @@ mixin modal()
 							.modal-get
 								input(type="submit" value="Восстановить").btn--lg.btn--yellow
 				//modal-pass-end
+
+				//modal-pass
+				.modal.modal--inrg(data-modal="ingr")
+					.modal-close
+						+icon("close","icon")
+					.modal-content--inrg
+						.modal-ingr-wrap
+							-
+								var items = [
+									'cheese',
+									'vegetable',
+									'pickles',
+									'steak',
+									'fish',
+									'mushrooms'
+									];
+							each item in items
+								.modal-ingr-col
+									.modal-ingr-icon
+										svg(class='icon')
+											use(xlink:href="#" + item)
+									- for (var i=0;i<4;i++)
+										.modal-ingr__el сыр моцарелла #{i+1}
+
+				//modal-ingr-end
 	//block modal end
