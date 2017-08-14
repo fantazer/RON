@@ -550,7 +550,7 @@
 							<!--block foundation end-->
 						</div>
 						<div class="part-ingr-title">Добавить ингредиенты</div>
-						<div class="part-ingr-cont">
+						<div class="part-ingr-cont modal-get" data-modal="ingr">
 							<div class="part-ingr-el">На левую</div>
 							<div class="part-ingr-el">На всю</div>
 							<div class="part-ingr-el">На правую</div>
@@ -632,6 +632,8 @@
 							<div class="part-img__total">итого:
 								<span>476г./400 р.</span>
 							</div>
+							<div class="part-img__message part-img__message--need">Выберите две основы</div>
+							<div class="part-img__message part-img__message--need-one">Выберите еще одну основу</div>
 							<a class="part-img__get" href="#">в корзину</a>
 							<div class="part-img__reset">Сбросить</div>
 						</div>
@@ -891,13 +893,13 @@
 					</div>
 					<!--modal-town-end-->
 					<!--modal-component-->
-					<div class="modal modal--white" data-modal="component">
+					<div class="modal modal--white modal--component" data-modal="component">
 						<div class="modal-close">
 							<svg class="icon">
 								<use xlink:href="#close"></use>
 							</svg>
 						</div>
-						<div class="modal-content modal-content--component">
+						<div class="modal-content--component">
 							<div class="modal-component">
 								<div class="modal-component__el">орегано</div>
 								<div class="modal-component__el">сыр Фета</div>
@@ -951,6 +953,85 @@
 						</div>
 					</div>
 					<!--modal-pass-end-->
+					<!--modal-pass-->
+					<div class="modal modal--inrg" data-modal="ingr">
+						<div class="modal-close">
+							<svg class="icon">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
+						<div class="modal-content--inrg">
+							<div class="modal-ingr-wrap">
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#cheese"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#vegetable"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#pickles"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#steak"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#fish"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+								<div class="modal-ingr-col">
+									<div class="modal-ingr-icon">
+										<svg class="icon">
+											<use xlink:href="#mushrooms"></use>
+										</svg>
+									</div>
+									<div class="modal-ingr__el">сыр моцарелла 1</div>
+									<div class="modal-ingr__el">сыр моцарелла 2</div>
+									<div class="modal-ingr__el">сыр моцарелла 3</div>
+									<div class="modal-ingr__el">сыр моцарелла 4</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--modal-ingr-end-->
 				</div>
 			</div>
 		</div>
