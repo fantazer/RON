@@ -5459,12 +5459,6 @@ select.select-beauty {
             border-radius: 0;
   }
 }
-@media only screen and (max-width: 768px) {
-  .modal-wrap {
-    padding: 25px 0 65px 0px;
-    width: 100%;
-  }
-}
 .input-cont {
   margin-bottom: 20px;
 }
@@ -5681,7 +5675,7 @@ select.select-beauty {
 @media only screen and (max-width: 768px) {
   .modal--component {
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 10px 65px 10px;
     width: 100%;
   }
 }
@@ -5691,6 +5685,7 @@ select.select-beauty {
 @media only screen and (max-width: 768px) {
   .modal--inrg {
     width: 100%;
+    padding: 25px 0 65px 0px;
   }
 }
 .modal--inrg .modal-content--inrg {
