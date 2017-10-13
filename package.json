@@ -8,6 +8,7 @@
   "devDependencies": {
     "browser-sync": "^2.10.1",
     "create-file": "^1.0.1",
+    "emitty": "^1.4.0",
     "gemini": "0.8.2",
     "gulp": "*",
     "gulp-autoprefixer": "^2.3.1",

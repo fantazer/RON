@@ -41,9 +41,7 @@ var zip = require('gulp-zip');
 var pugInheritance = require('gulp-pug-inheritance');
 var changed = require('gulp-changed');
 var pug = require('gulp-pug');
-
-
-
+var emitty = require('emitty').setup('app/html', 'pug');
 
 // ########## make img ###############
 gulp.task('imageCompress',function(){
@@ -196,12 +194,21 @@ gulp.task('min:js',function(){
 // ########## make css end ###############
 
 // ########## make html ###############
+gulp.task('watch', () => {
+	// Shows that run "watch" mode
+	global.watch = true;
+	gulp.watch('app/html/**/*.pug', gulp.series('pug'))
+		.on('all', (event, filepath) => {
+			global.emittyChangedFile = filepath;
+		});
+});
+
 
 gulp.task('pug', function() {
 		gulp.src(['app/html/*.pug','app/module/**/*.pug',])
 				//.pipe(changed('app/', {extension: '.html'}))
 				//.pipe(cache('pug'))
-				.pipe(pugInheritance({basedir: 'app/html/',skip:'node_modules/'}))
+				.pipe(gulpif(global.watch, emitty.stream(global.emittyChangedFile)))
 				.pipe(progeny({
 						regexp: /^\s*@import\s*(?:\(\w+\)\s*)?['"]([^'"]+)['"]/
 				}))
